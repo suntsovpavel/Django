@@ -1,6 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 import random
+import logging
+
+logger = logging.getLogger(__name__)
 
 def index(request):
     return HttpResponse('Hello World!')

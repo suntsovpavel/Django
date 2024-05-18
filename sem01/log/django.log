@@ -1,0 +1,6 @@
+INFO 2024-05-18 17:53:22,353 autoreload 784 3080Watching for file changes with StatReloader
+INFO 2024-05-18 17:53:27,495 basehttp 784 12036"GET /number/ HTTP/1.1" 200 2
+INFO 2024-05-18 18:00:07,331 autoreload 784 3080C:\_GB_django\sem01\sem01\settings.py changed, reloading.
+INFO 2024-05-18 18:00:08,008 autoreload 7768 8624Watching for file changes with StatReloader
+INFO 2024-05-18 18:00:09,649 autoreload 7768 8624C:\_GB_django\sem01\sem01\settings.py changed, reloading.
+INFO 2024-05-18 18:00:10,393 autoreload 6360 2436Watching for file changes with StatReloader
