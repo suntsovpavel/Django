@@ -1,0 +1,39 @@
+Watching for file changes with StatReloader
+"GET /prefix/ HTTP/1.1" 200 13
+C:\_GB_django\001\mydjango\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\_GB_django\001\mydjango\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\_GB_django\001\mydjango\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /prefix/about/ HTTP/1.1" 200 27
+"GET /prefix/ HTTP/1.1" 200 13
+C:\_GB_django\001\mydjango\mydjango\settings.py changed, reloading.
+Watching for file changes with StatReloader
+C:\_GB_django\001\mydjango\mydjango\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Error in about page: division by zero
+Traceback (most recent call last):
+  File "C:\_GB_django\001\mydjango\myapp\views.py", line 14, in about
+    result = 1 / 0
+             ~~^~~
+ZeroDivisionError: division by zero
+"GET /prefix/about/ HTTP/1.1" 200 27
+C:\_GB_django\001\mydjango\mydjango\settings.py changed, reloading.
+Watching for file changes with StatReloader
+C:\_GB_django\001\mydjango\mydjango\settings.py changed, reloading.
+Watching for file changes with StatReloader
+C:\_GB_django\001\mydjango\mydjango\settings.py changed, reloading.
+INFO 2024-05-18 12:12:11,975 autoreload 9740 1408Watching for file changes with StatReloader
+INFO 2024-05-18 12:12:13,649 autoreload 9740 1408C:\_GB_django\001\mydjango\mydjango\settings.py changed, reloading.
+INFO 2024-05-18 12:12:14,318 autoreload 10136 1680Watching for file changes with StatReloader
+ERROR 2024-05-18 12:12:29,928 views 10136 7200Error in about page: division by zero
+Traceback (most recent call last):
+  File "C:\_GB_django\001\mydjango\myapp\views.py", line 14, in about
+    result = 1 / 0
+             ~~^~~
+ZeroDivisionError: division by zero
+INFO 2024-05-18 12:12:29,931 basehttp 10136 7200"GET /prefix/about/ HTTP/1.1" 200 27
+INFO 2024-05-18 12:12:36,048 basehttp 10136 7200"GET /prefix/ HTTP/1.1" 200 13
