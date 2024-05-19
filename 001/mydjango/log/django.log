@@ -37,3 +37,6 @@ Traceback (most recent call last):
 ZeroDivisionError: division by zero
 INFO 2024-05-18 12:12:29,931 basehttp 10136 7200"GET /prefix/about/ HTTP/1.1" 200 27
 INFO 2024-05-18 12:12:36,048 basehttp 10136 7200"GET /prefix/ HTTP/1.1" 200 13
+INFO 2024-05-18 20:32:04,223 autoreload 11396 4008Watching for file changes with StatReloader
+INFO 2024-05-18 20:32:57,562 autoreload 8932 11284Watching for file changes with StatReloader
+INFO 2024-05-18 23:00:50,348 autoreload 10932 1640Watching for file changes with StatReloader
