@@ -7,4 +7,7 @@ urlpatterns = [
  path('coin/', views.coin, name='coin'),
  path('cube/', views.cube, name='cube'),
  path('number/', views.number, name='number'),
+ # sem2:
+ path('game/', views.game, name='game'),
+ path('statistic/', views.statistic, name='statistic'),
 ]
