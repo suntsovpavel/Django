@@ -42,3 +42,4 @@ INFO 2024-05-18 20:04:11,076 views 7984 12972about page accessed
 INFO 2024-05-18 20:04:11,077 basehttp 7984 12972"GET /about/ HTTP/1.1" 200 695
 INFO 2024-05-18 20:04:13,259 views 7984 12972Index page accessed
 INFO 2024-05-18 20:04:13,260 basehttp 7984 12972"GET / HTTP/1.1" 200 1608
+INFO 2024-05-19 18:28:16,460 autoreload 8184 1856Watching for file changes with StatReloader

@@ -12,5 +12,3 @@ class Command(BaseCommand):
         user = User.objects.filter(pk=pk).first()
         self.stdout.write(f'{user}')
 
-
-# Register your models here.
