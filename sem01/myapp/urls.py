@@ -10,4 +10,5 @@ urlpatterns = [
  # sem2:
  path('game/', views.game, name='game'),
  path('statistic/', views.statistic, name='statistic'),
+ path('create_authors/', views.create_authors, name='create_authors'),
 ]

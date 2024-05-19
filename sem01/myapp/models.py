@@ -12,15 +12,19 @@ class Game(models.Model):
 # Метод должен возвращать словарь с парой ключейзначений, для орла и для решки.
     @staticmethod
     def statistic(n: int):    
-        result = []
         games = Game.objects.all()
         if (len(games)>n): 
             games=games[len(games)-n:]
-        for game in games:     
-            result.append(game)
-        return result
+        return games
 
-        
+class Author(models.Model):
+    name = models.CharField(max_length=100)
+    lastname = models.CharField(max_length=100)
+    email = models.EmailField()
+    biography = models.TextField(max_length=2000)
+    birthday = models.DateField(blank=False)
 
+    def fullname(self):
+        return self.name + ' ' + self.lastname 
     
 
