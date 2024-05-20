@@ -7,11 +7,27 @@ from datetime import date
 
 logger = logging.getLogger(__name__)
 
+# sem3
+# Изменяем задачу 8 из семинара 1 с выводом двух html страниц:
+# главной и о себе.
+# Перенесите вёрстку в шаблоны.
+# Представления должны пробрасывать полезную информацию в
+# шаблон через контекст.
 def index(request):
-    return HttpResponse('Hello World!')
+    context = {
+        'title': 'Главная',
+        'header': 'Главная',
+        'content': 'lorenbv ncvbncvb ncbv cvbncvfb gkj ygiuygtiuygkjhb giouygouyg uhoiuh'  
+    }
+    return render(request, 'myapp/index.html', context)
 
 def about(request):
-    return HttpResponse('About us')
+    context = {
+        'title': 'обо мне',
+        'header': 'Обо мне',
+        'content': 'вфыва ывапорпролп ффывафыв пролпролпрола арвпарвапр вапрвапрвапрвпарююююю.....'  
+    }
+    return render(request, 'myapp/index.html', context)
 
 def coin(request):
     return HttpResponse(random.choice(['Орел', 'Решка']))
@@ -58,3 +74,4 @@ def create_authors(request):
         author.save()
         result.append(author.fullname())
     return HttpResponse(f'{result}')        
+

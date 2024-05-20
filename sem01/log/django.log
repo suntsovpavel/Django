@@ -1,0 +1,56 @@
+INFO 2024-05-20 18:06:32,291 autoreload 12488 10492Watching for file changes with StatReloader
+ERROR 2024-05-20 18:06:36,338 log 12488 9064Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\_GB_django\sem01\myapp\views.py", line 16, in index
+    return render(request, 'myapp/index.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: myapp/index.html
+ERROR 2024-05-20 18:06:36,342 basehttp 12488 9064"GET / HTTP/1.1" 500 79925
+WARNING 2024-05-20 18:06:36,527 log 12488 9064Not Found: /favicon.ico
+WARNING 2024-05-20 18:06:36,528 basehttp 12488 9064"GET /favicon.ico HTTP/1.1" 404 3461
+ERROR 2024-05-20 18:06:38,759 log 12488 9064Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\_GB_django\sem01\myapp\views.py", line 16, in index
+    return render(request, 'myapp/index.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: myapp/index.html
+ERROR 2024-05-20 18:06:38,762 basehttp 12488 9064"GET / HTTP/1.1" 500 80062
+INFO 2024-05-20 18:07:17,553 autoreload 11580 7484Watching for file changes with StatReloader
+INFO 2024-05-20 18:07:21,021 basehttp 11580 7756"GET / HTTP/1.1" 200 235
+INFO 2024-05-20 18:07:28,064 basehttp 11580 7756"GET /about HTTP/1.1" 301 0
+INFO 2024-05-20 18:07:28,071 basehttp 11580 9696"GET /about/ HTTP/1.1" 200 8
+INFO 2024-05-20 18:07:54,210 autoreload 11580 7484C:\_GB_django\sem01\myapp\views.py changed, reloading.
+INFO 2024-05-20 18:07:54,881 autoreload 6468 8468Watching for file changes with StatReloader
+INFO 2024-05-20 18:07:57,771 autoreload 6468 8468C:\_GB_django\sem01\myapp\views.py changed, reloading.
+INFO 2024-05-20 18:07:58,464 autoreload 1980 6748Watching for file changes with StatReloader
+INFO 2024-05-20 18:07:59,990 basehttp 1980 11192"GET /about/ HTTP/1.1" 200 311
+INFO 2024-05-20 18:11:25,591 autoreload 1980 6748C:\_GB_django\sem01\myapp\views.py changed, reloading.
+INFO 2024-05-20 18:11:26,287 autoreload 11948 4480Watching for file changes with StatReloader
