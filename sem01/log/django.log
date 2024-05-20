@@ -54,3 +54,38 @@ INFO 2024-05-20 18:07:58,464 autoreload 1980 6748Watching for file changes with 
 INFO 2024-05-20 18:07:59,990 basehttp 1980 11192"GET /about/ HTTP/1.1" 200 311
 INFO 2024-05-20 18:11:25,591 autoreload 1980 6748C:\_GB_django\sem01\myapp\views.py changed, reloading.
 INFO 2024-05-20 18:11:26,287 autoreload 11948 4480Watching for file changes with StatReloader
+INFO 2024-05-20 18:20:24,257 autoreload 14236 7140Watching for file changes with StatReloader
+INFO 2024-05-20 18:20:29,855 basehttp 14236 6788"GET /about/ HTTP/1.1" 200 278
+INFO 2024-05-20 18:20:33,041 basehttp 14236 6788"GET / HTTP/1.1" 200 202
+INFO 2024-05-20 18:23:16,507 autoreload 14236 7140C:\_GB_django\sem01\myapp\views.py changed, reloading.
+INFO 2024-05-20 18:23:17,257 autoreload 12816 6784Watching for file changes with StatReloader
+INFO 2024-05-20 20:11:03,587 autoreload 12816 6784C:\_GB_django\sem01\myapp\views.py changed, reloading.
+INFO 2024-05-20 20:11:04,359 autoreload 8156 4188Watching for file changes with StatReloader
+INFO 2024-05-20 20:12:56,310 autoreload 8156 4188C:\_GB_django\sem01\myapp\views.py changed, reloading.
+INFO 2024-05-20 20:12:57,104 autoreload 8808 5108Watching for file changes with StatReloader
+INFO 2024-05-20 20:13:35,652 autoreload 8808 5108C:\_GB_django\sem01\myapp\views.py changed, reloading.
+INFO 2024-05-20 20:13:36,366 autoreload 7308 11032Watching for file changes with StatReloader
+INFO 2024-05-20 20:14:21,073 autoreload 7308 11032C:\_GB_django\sem01\myapp\views.py changed, reloading.
+INFO 2024-05-20 20:14:21,684 autoreload 11200 11732Watching for file changes with StatReloader
+INFO 2024-05-20 20:15:26,466 autoreload 11200 11732C:\_GB_django\sem01\myapp\views.py changed, reloading.
+INFO 2024-05-20 20:15:27,173 autoreload 3128 12452Watching for file changes with StatReloader
+INFO 2024-05-20 20:16:35,147 autoreload 3128 12452C:\_GB_django\sem01\myapp\urls.py changed, reloading.
+INFO 2024-05-20 20:16:35,888 autoreload 3312 9056Watching for file changes with StatReloader
+INFO 2024-05-20 20:17:40,782 autoreload 3312 9056C:\_GB_django\sem01\myapp\views.py changed, reloading.
+INFO 2024-05-20 20:17:41,486 autoreload 4152 6992Watching for file changes with StatReloader
+INFO 2024-05-20 20:17:44,274 autoreload 4152 6992C:\_GB_django\sem01\myapp\views.py changed, reloading.
+INFO 2024-05-20 20:17:44,911 autoreload 3552 3444Watching for file changes with StatReloader
+INFO 2024-05-20 20:21:41,740 autoreload 3552 3444C:\_GB_django\sem01\myapp\views.py changed, reloading.
+INFO 2024-05-20 20:21:42,446 autoreload 12548 8048Watching for file changes with StatReloader
+INFO 2024-05-20 20:25:23,807 autoreload 12548 8048C:\_GB_django\sem01\myapp\views.py changed, reloading.
+INFO 2024-05-20 20:25:25,107 autoreload 9008 5800Watching for file changes with StatReloader
+INFO 2024-05-20 20:26:14,140 autoreload 9008 5800C:\_GB_django\sem01\myapp\views.py changed, reloading.
+INFO 2024-05-20 20:26:14,886 autoreload 3416 1376Watching for file changes with StatReloader
+INFO 2024-05-20 20:26:42,756 basehttp 3416 4144"GET /coin/6 HTTP/1.1" 301 0
+INFO 2024-05-20 20:26:42,780 basehttp 3416 3552"GET /coin/6/ HTTP/1.1" 200 250
+INFO 2024-05-20 20:26:50,370 basehttp 3416 3552"GET /cube/6/ HTTP/1.1" 200 139
+INFO 2024-05-20 20:26:59,123 basehttp 3416 3552"GET /number/6/ HTTP/1.1" 200 151
+INFO 2024-05-20 20:32:22,291 autoreload 3416 1376C:\_GB_django\sem01\myapp\views.py changed, reloading.
+INFO 2024-05-20 20:32:22,911 autoreload 12992 13068Watching for file changes with StatReloader
+INFO 2024-05-20 20:52:44,863 autoreload 12992 13068C:\_GB_django\sem01\myapp\views.py changed, reloading.
+INFO 2024-05-20 20:52:45,784 autoreload 7484 8120Watching for file changes with StatReloader
