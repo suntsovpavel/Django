@@ -40,3 +40,157 @@ INFO 2024-05-18 12:12:36,048 basehttp 10136 7200"GET /prefix/ HTTP/1.1" 200 13
 INFO 2024-05-18 20:32:04,223 autoreload 11396 4008Watching for file changes with StatReloader
 INFO 2024-05-18 20:32:57,562 autoreload 8932 11284Watching for file changes with StatReloader
 INFO 2024-05-18 23:00:50,348 autoreload 10932 1640Watching for file changes with StatReloader
+INFO 2024-05-19 22:07:45,766 autoreload 6100 12364Watching for file changes with StatReloader
+INFO 2024-05-19 22:08:05,477 autoreload 5720 12048Watching for file changes with StatReloader
+INFO 2024-05-19 22:08:47,890 autoreload 5720 12048C:\_GB_django\001\mydjango\myapp3\views.py changed, reloading.
+INFO 2024-05-19 22:08:48,535 autoreload 2488 7716Watching for file changes with StatReloader
+INFO 2024-05-19 22:09:06,844 autoreload 2488 7716C:\_GB_django\001\mydjango\myapp3\views.py changed, reloading.
+INFO 2024-05-19 22:09:07,474 autoreload 9368 8876Watching for file changes with StatReloader
+INFO 2024-05-19 22:09:09,125 autoreload 9368 8876C:\_GB_django\001\mydjango\mydjango\urls.py changed, reloading.
+INFO 2024-05-19 22:09:09,785 autoreload 5632 9192Watching for file changes with StatReloader
+INFO 2024-05-19 22:09:12,635 autoreload 5632 9192C:\_GB_django\001\mydjango\myapp3\views.py changed, reloading.
+INFO 2024-05-19 22:09:13,320 autoreload 12388 5772Watching for file changes with StatReloader
+INFO 2024-05-19 22:09:15,981 basehttp 12388 11396"GET / HTTP/1.1" 200 13
+WARNING 2024-05-19 22:09:16,050 log 12388 11396Not Found: /favicon.ico
+WARNING 2024-05-19 22:09:16,051 basehttp 12388 11396"GET /favicon.ico HTTP/1.1" 404 2776
+INFO 2024-05-19 22:09:45,139 basehttp 12388 11396"GET / HTTP/1.1" 200 13
+INFO 2024-05-19 22:10:08,887 autoreload 12388 5772C:\_GB_django\001\mydjango\mydjango\urls.py changed, reloading.
+INFO 2024-05-19 22:10:09,484 autoreload 10500 13484Watching for file changes with StatReloader
+INFO 2024-05-19 22:10:11,128 autoreload 10500 13484C:\_GB_django\001\mydjango\mydjango\urls.py changed, reloading.
+INFO 2024-05-19 22:10:11,713 autoreload 5976 12868Watching for file changes with StatReloader
+WARNING 2024-05-19 22:10:14,487 log 5976 6088Not Found: /less3
+WARNING 2024-05-19 22:10:14,487 basehttp 5976 6088"GET /less3 HTTP/1.1" 404 2768
+WARNING 2024-05-19 22:10:33,957 log 5976 6088Not Found: /less3/hello
+WARNING 2024-05-19 22:10:33,957 basehttp 5976 6088"GET /less3/hello HTTP/1.1" 404 2786
+INFO 2024-05-19 22:11:00,849 autoreload 5976 12868C:\_GB_django\001\mydjango\myapp3\urls.py changed, reloading.
+INFO 2024-05-19 22:11:01,534 autoreload 10104 5040Watching for file changes with StatReloader
+WARNING 2024-05-19 22:11:03,143 log 10104 12436Not Found: /less3/hello
+WARNING 2024-05-19 22:11:03,144 basehttp 10104 12436"GET /less3/hello HTTP/1.1" 404 2798
+INFO 2024-05-19 22:11:16,073 autoreload 10104 5040C:\_GB_django\001\mydjango\myapp3\urls.py changed, reloading.
+INFO 2024-05-19 22:11:16,705 autoreload 2000 13148Watching for file changes with StatReloader
+WARNING 2024-05-19 22:11:21,325 log 2000 4656Not Found: /less3
+WARNING 2024-05-19 22:11:21,326 basehttp 2000 4656"GET /less3 HTTP/1.1" 404 2768
+INFO 2024-05-19 22:11:48,994 autoreload 2000 13148C:\_GB_django\001\mydjango\mydjango\urls.py changed, reloading.
+INFO 2024-05-19 22:11:49,668 autoreload 10284 2244Watching for file changes with StatReloader
+WARNING 2024-05-19 22:11:52,632 log 10284 10008Not Found: /less3
+WARNING 2024-05-19 22:11:52,633 basehttp 10284 10008"GET /less3 HTTP/1.1" 404 2528
+INFO 2024-05-19 22:14:10,090 autoreload 9724 4780Watching for file changes with StatReloader
+INFO 2024-05-19 22:14:31,106 basehttp 9724 11904"GET / HTTP/1.1" 200 13
+WARNING 2024-05-19 22:14:36,386 log 9724 11904Not Found: /less3
+WARNING 2024-05-19 22:14:36,387 basehttp 9724 11904"GET /less3 HTTP/1.1" 404 2528
+WARNING 2024-05-19 22:14:45,345 log 9724 11904Not Found: /less3/
+WARNING 2024-05-19 22:14:45,345 basehttp 9724 11904"GET /less3/ HTTP/1.1" 404 2773
+INFO 2024-05-19 22:14:50,774 basehttp 9724 11904"GET /less3/hello HTTP/1.1" 301 0
+INFO 2024-05-19 22:14:50,778 basehttp 9724 11588"GET /less3/hello/ HTTP/1.1" 200 26
+INFO 2024-05-19 22:14:54,955 basehttp 9724 11588"GET /less3/hello2/ HTTP/1.1" 200 23
+INFO 2024-05-20 09:30:23,905 autoreload 14080 4172Watching for file changes with StatReloader
+WARNING 2024-05-20 09:30:24,683 log 14080 8424Not Found: /favicon.ico
+WARNING 2024-05-20 09:30:24,684 basehttp 14080 8424"GET /favicon.ico HTTP/1.1" 404 2546
+INFO 2024-05-20 09:32:52,238 autoreload 14080 4172C:\_GB_django\001\mydjango\myapp3\urls.py changed, reloading.
+INFO 2024-05-20 09:32:53,002 autoreload 4160 7072Watching for file changes with StatReloader
+INFO 2024-05-20 09:33:08,355 autoreload 4160 7072C:\_GB_django\001\mydjango\myapp3\urls.py changed, reloading.
+INFO 2024-05-20 09:33:09,020 autoreload 6364 7764Watching for file changes with StatReloader
+INFO 2024-05-20 09:36:45,466 autoreload 6364 7764C:\_GB_django\001\mydjango\myapp3\views.py changed, reloading.
+INFO 2024-05-20 09:36:46,138 autoreload 11592 2600Watching for file changes with StatReloader
+INFO 2024-05-20 09:37:35,006 autoreload 11592 2600C:\_GB_django\001\mydjango\myapp3\views.py changed, reloading.
+INFO 2024-05-20 09:37:35,657 autoreload 14032 6412Watching for file changes with StatReloader
+INFO 2024-05-20 09:38:56,006 autoreload 14032 6412C:\_GB_django\001\mydjango\myapp3\views.py changed, reloading.
+INFO 2024-05-20 09:38:56,657 autoreload 8768 8724Watching for file changes with StatReloader
+INFO 2024-05-20 09:38:58,356 autoreload 8768 8724C:\_GB_django\001\mydjango\myapp3\views.py changed, reloading.
+INFO 2024-05-20 09:38:58,991 autoreload 11892 9580Watching for file changes with StatReloader
+INFO 2024-05-20 09:40:42,560 basehttp 11892 9620"GET / HTTP/1.1" 200 13
+WARNING 2024-05-20 09:40:52,167 log 11892 9620Not Found: /posts/2024
+WARNING 2024-05-20 09:40:52,168 basehttp 11892 9620"GET /posts/2024 HTTP/1.1" 404 2543
+INFO 2024-05-20 09:41:10,527 autoreload 2172 13216Watching for file changes with StatReloader
+WARNING 2024-05-20 09:41:13,269 log 2172 11836Not Found: /posts/2024
+WARNING 2024-05-20 09:41:13,270 basehttp 2172 11836"GET /posts/2024 HTTP/1.1" 404 2543
+INFO 2024-05-20 09:42:29,947 basehttp 2172 11836"GET /less3/posts/2024 HTTP/1.1" 301 0
+INFO 2024-05-20 09:42:29,953 basehttp 2172 12360"GET /less3/posts/2024/ HTTP/1.1" 200 19
+INFO 2024-05-20 09:43:40,624 basehttp 2172 12360"GET /less3/posts/2024/6 HTTP/1.1" 301 0
+INFO 2024-05-20 09:43:40,628 basehttp 2172 12908"GET /less3/posts/2024/6/ HTTP/1.1" 200 21
+INFO 2024-05-20 09:45:20,648 basehttp 2172 12908"GET /less3/posts/2024/6/ghjfgjh HTTP/1.1" 301 0
+INFO 2024-05-20 09:45:20,653 basehttp 2172 1772"GET /less3/posts/2024/6/ghjfgjh/ HTTP/1.1" 200 361
+INFO 2024-05-20 09:50:27,953 autoreload 2172 13216C:\_GB_django\001\mydjango\myapp3\views.py changed, reloading.
+INFO 2024-05-20 09:50:29,175 autoreload 3324 11988Watching for file changes with StatReloader
+INFO 2024-05-20 09:52:41,455 autoreload 3324 11988C:\_GB_django\001\mydjango\myapp3\urls.py changed, reloading.
+INFO 2024-05-20 09:52:42,166 autoreload 8408 3460Watching for file changes with StatReloader
+WARNING 2024-05-20 09:53:05,174 log 8408 1348Not Found: /docs
+WARNING 2024-05-20 09:53:05,176 basehttp 8408 1348"GET /docs HTTP/1.1" 404 2525
+INFO 2024-05-20 09:53:09,116 basehttp 8408 1348"GET / HTTP/1.1" 200 13
+INFO 2024-05-20 09:53:19,158 autoreload 12456 3332Watching for file changes with StatReloader
+INFO 2024-05-20 09:53:22,139 basehttp 12456 2380"GET / HTTP/1.1" 200 13
+INFO 2024-05-20 09:53:45,368 autoreload 12456 3332C:\_GB_django\001\mydjango\myapp3\urls.py changed, reloading.
+INFO 2024-05-20 09:53:46,068 autoreload 6928 3200Watching for file changes with StatReloader
+INFO 2024-05-20 09:53:48,051 basehttp 6928 4792"GET / HTTP/1.1" 200 13
+INFO 2024-05-20 09:53:51,207 autoreload 6928 3200C:\_GB_django\001\mydjango\myapp3\urls.py changed, reloading.
+INFO 2024-05-20 09:53:51,868 autoreload 8548 7268Watching for file changes with StatReloader
+INFO 2024-05-20 09:54:06,677 basehttp 8548 564"GET / HTTP/1.1" 200 13
+INFO 2024-05-20 09:54:09,498 basehttp 8548 564"GET / HTTP/1.1" 200 13
+INFO 2024-05-20 09:56:31,661 autoreload 3144 13500Watching for file changes with StatReloader
+WARNING 2024-05-20 09:56:33,895 log 3144 8964Not Found: /less3/less3
+WARNING 2024-05-20 09:56:33,896 basehttp 3144 8964"GET /less3/less3 HTTP/1.1" 404 3594
+WARNING 2024-05-20 09:56:34,653 log 3144 8964Not Found: /less3/less3
+WARNING 2024-05-20 09:56:34,654 basehttp 3144 8964"GET /less3/less3 HTTP/1.1" 404 3594
+ERROR 2024-05-20 09:56:38,801 log 3144 8964Internal Server Error: /less3/
+Traceback (most recent call last):
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\_GB_django\001\mydjango\myapp3\views.py", line 39, in my_view
+    return render(request, "myapp3/my_template.html", context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: myapp3/my_template.html
+ERROR 2024-05-20 09:56:38,805 basehttp 3144 8964"GET /less3/ HTTP/1.1" 500 78834
+ERROR 2024-05-20 09:57:34,625 log 3144 8964Internal Server Error: /less3/
+Traceback (most recent call last):
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\_GB_django\001\mydjango\myapp3\views.py", line 39, in my_view
+    return render(request, "myapp3/my_template.html", context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: myapp3/my_template.html
+ERROR 2024-05-20 09:57:34,629 basehttp 3144 8964"GET /less3/ HTTP/1.1" 500 78971
+INFO 2024-05-20 09:57:44,862 autoreload 12340 2696Watching for file changes with StatReloader
+INFO 2024-05-20 09:57:48,984 basehttp 12340 10436"GET /less3/ HTTP/1.1" 200 186
+INFO 2024-05-20 10:02:20,908 autoreload 12340 2696C:\_GB_django\001\mydjango\myapp3\views.py changed, reloading.
+INFO 2024-05-20 10:02:21,645 autoreload 12720 8372Watching for file changes with StatReloader
+INFO 2024-05-20 10:02:42,322 autoreload 12720 8372C:\_GB_django\001\mydjango\myapp3\views.py changed, reloading.
+INFO 2024-05-20 10:02:43,078 autoreload 1520 12632Watching for file changes with StatReloader
+INFO 2024-05-20 10:04:16,429 autoreload 1520 12632C:\_GB_django\001\mydjango\myapp3\urls.py changed, reloading.
+INFO 2024-05-20 10:04:17,117 autoreload 3560 11472Watching for file changes with StatReloader
+INFO 2024-05-20 10:04:18,832 autoreload 3560 11472C:\_GB_django\001\mydjango\myapp3\urls.py changed, reloading.
+INFO 2024-05-20 10:04:19,531 autoreload 10024 5780Watching for file changes with StatReloader
+INFO 2024-05-20 10:04:39,839 basehttp 10024 6568"GET /less3/if HTTP/1.1" 301 0
+INFO 2024-05-20 10:04:39,853 basehttp 10024 10308"GET /less3/if/ HTTP/1.1" 200 342
+INFO 2024-05-20 10:07:33,237 autoreload 10024 5780C:\_GB_django\001\mydjango\myapp3\views.py changed, reloading.
+INFO 2024-05-20 10:07:33,924 autoreload 6260 1924Watching for file changes with StatReloader
+INFO 2024-05-20 10:07:35,629 autoreload 6260 1924C:\_GB_django\001\mydjango\myapp3\views.py changed, reloading.
+INFO 2024-05-20 10:07:36,284 autoreload 3308 12856Watching for file changes with StatReloader
+INFO 2024-05-20 10:07:55,927 autoreload 3308 12856C:\_GB_django\001\mydjango\myapp3\urls.py changed, reloading.
+INFO 2024-05-20 10:07:56,626 autoreload 14252 12608Watching for file changes with StatReloader
+INFO 2024-05-20 10:08:04,691 autoreload 14252 12608C:\_GB_django\001\mydjango\myapp3\urls.py changed, reloading.
+INFO 2024-05-20 10:08:05,330 autoreload 6800 12644Watching for file changes with StatReloader
+INFO 2024-05-20 10:08:11,400 basehttp 6800 4220"GET /less3/for/ HTTP/1.1" 200 1045
