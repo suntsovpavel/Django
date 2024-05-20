@@ -138,3 +138,57 @@ INFO 2024-05-20 21:40:45,081 views 11208 12596about page accessed
 INFO 2024-05-20 21:40:45,083 basehttp 11208 12596"GET /about/ HTTP/1.1" 200 532
 INFO 2024-05-20 21:40:45,455 views 11208 12596Index page accessed
 INFO 2024-05-20 21:40:45,456 basehttp 11208 12596"GET / HTTP/1.1" 200 1349
+INFO 2024-05-20 21:42:36,158 views 11208 12596Index page accessed
+INFO 2024-05-20 21:42:36,158 basehttp 11208 12596"GET / HTTP/1.1" 200 1349
+INFO 2024-05-20 21:42:36,666 views 11208 12596about page accessed
+INFO 2024-05-20 21:42:36,667 basehttp 11208 12596"GET /about/ HTTP/1.1" 200 532
+INFO 2024-05-20 21:42:37,296 views 11208 12596Index page accessed
+INFO 2024-05-20 21:42:37,297 basehttp 11208 12596"GET / HTTP/1.1" 200 1349
+INFO 2024-05-20 21:42:37,698 views 11208 12596about page accessed
+INFO 2024-05-20 21:42:37,699 basehttp 11208 12596"GET /about/ HTTP/1.1" 200 532
+INFO 2024-05-20 21:42:38,920 views 11208 12596Index page accessed
+INFO 2024-05-20 21:42:38,921 basehttp 11208 12596"GET / HTTP/1.1" 200 1349
+INFO 2024-05-20 21:42:39,490 views 11208 12596about page accessed
+INFO 2024-05-20 21:42:39,491 basehttp 11208 12596"GET /about/ HTTP/1.1" 200 532
+INFO 2024-05-20 21:43:42,543 views 11208 12596Index page accessed
+INFO 2024-05-20 21:43:42,551 basehttp 11208 12596"GET / HTTP/1.1" 200 3223
+INFO 2024-05-20 21:43:46,080 views 11208 12596about page accessed
+INFO 2024-05-20 21:43:46,082 basehttp 11208 12596"GET /about/ HTTP/1.1" 200 532
+INFO 2024-05-20 21:43:47,302 views 11208 12596Index page accessed
+INFO 2024-05-20 21:43:47,304 basehttp 11208 12596"GET / HTTP/1.1" 200 3223
+INFO 2024-05-20 21:44:12,387 views 11208 12596about page accessed
+INFO 2024-05-20 21:44:12,393 basehttp 11208 12596"GET /about/ HTTP/1.1" 200 1777
+INFO 2024-05-20 21:44:13,272 views 11208 12596Index page accessed
+INFO 2024-05-20 21:44:13,274 basehttp 11208 12596"GET / HTTP/1.1" 200 3223
+INFO 2024-05-20 21:44:13,771 views 11208 12596about page accessed
+INFO 2024-05-20 21:44:13,772 basehttp 11208 12596"GET /about/ HTTP/1.1" 200 1777
+INFO 2024-05-20 21:44:15,270 views 11208 12596Index page accessed
+INFO 2024-05-20 21:44:15,271 basehttp 11208 12596"GET / HTTP/1.1" 200 3223
+INFO 2024-05-20 21:44:16,723 views 11208 12596about page accessed
+INFO 2024-05-20 21:44:16,724 basehttp 11208 12596"GET /about/ HTTP/1.1" 200 1777
+INFO 2024-05-20 21:44:18,001 views 11208 12596Index page accessed
+INFO 2024-05-20 21:44:18,002 basehttp 11208 12596"GET / HTTP/1.1" 200 3223
+INFO 2024-05-20 21:44:18,538 views 11208 12596about page accessed
+INFO 2024-05-20 21:44:18,539 basehttp 11208 12596"GET /about/ HTTP/1.1" 200 1777
+INFO 2024-05-20 21:44:18,992 views 11208 12596Index page accessed
+INFO 2024-05-20 21:44:18,994 basehttp 11208 12596"GET / HTTP/1.1" 200 3223
+INFO 2024-05-20 21:44:19,635 views 11208 12596about page accessed
+INFO 2024-05-20 21:44:19,636 basehttp 11208 12596"GET /about/ HTTP/1.1" 200 1777
+INFO 2024-05-20 21:44:20,671 views 11208 12596Index page accessed
+INFO 2024-05-20 21:44:20,672 basehttp 11208 12596"GET / HTTP/1.1" 200 3223
+INFO 2024-05-20 21:44:21,251 views 11208 12596about page accessed
+INFO 2024-05-20 21:44:21,252 basehttp 11208 12596"GET /about/ HTTP/1.1" 200 1777
+INFO 2024-05-20 21:44:21,609 views 11208 12596Index page accessed
+INFO 2024-05-20 21:44:21,610 basehttp 11208 12596"GET / HTTP/1.1" 200 3223
+INFO 2024-05-20 21:44:23,019 views 11208 12596about page accessed
+INFO 2024-05-20 21:44:23,021 basehttp 11208 12596"GET /about/ HTTP/1.1" 200 1777
+INFO 2024-05-20 21:45:09,090 autoreload 11208 920C:\_GB_django\my_dz\myapp\views.py changed, reloading.
+INFO 2024-05-20 21:45:09,783 autoreload 12496 13648Watching for file changes with StatReloader
+INFO 2024-05-20 21:45:16,787 autoreload 12496 13648C:\_GB_django\my_dz\myapp\views.py changed, reloading.
+INFO 2024-05-20 21:45:17,488 autoreload 12012 2536Watching for file changes with StatReloader
+INFO 2024-05-20 23:56:30,854 autoreload 12012 2536C:\_GB_django\my_dz\myapp\views.py changed, reloading.
+INFO 2024-05-20 23:56:32,002 autoreload 3212 3240Watching for file changes with StatReloader
+INFO 2024-05-20 23:56:33,706 autoreload 3212 3240C:\_GB_django\my_dz\myapp\views.py changed, reloading.
+INFO 2024-05-20 23:56:34,387 autoreload 5708 4944Watching for file changes with StatReloader
+INFO 2024-05-21 00:51:33,648 autoreload 5708 4944C:\_GB_django\my_dz\myapp\models.py changed, reloading.
+INFO 2024-05-21 00:51:34,323 autoreload 4276 14092Watching for file changes with StatReloader

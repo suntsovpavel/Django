@@ -15,7 +15,7 @@ class User(models.Model):
     phone = models.IntegerField()
     password = models.CharField(max_length=100)
     adress = models.CharField(max_length=100)
-    date_register = models.DateTimeField(blank=False)
+    date_register = models.DateField(blank=False)
 
     def __str__(self):
         return f'Username: {self.name}, email: {self.email}, phone: {self.phone},adress: {self.adress},date_register: {self.date_register}'
@@ -31,7 +31,7 @@ class Product(models.Model):
     description = models.TextField()
     price = models.DecimalField(max_digits=8, decimal_places=2)    
     amount = models.IntegerField()
-    date = models.DateTimeField(blank=False)
+    date = models.DateField(blank=False)
 
 # Поля модели «Заказ»:
 # — связь с моделью «Клиент», указывает на клиента, сделавшего заказ
@@ -43,7 +43,7 @@ class Product(models.Model):
 class Order(models.Model):
     customer = models.ForeignKey(User, on_delete=models.CASCADE)
     products = models.ManyToManyField(Product)
-    date_ordered = models.DateTimeField(auto_now_add=True)
+    date_ordered = models.DateField()
     total_price = models.DecimalField(max_digits=8, decimal_places=2)
 
 
