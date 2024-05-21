@@ -19,9 +19,10 @@ from django.urls import path, include
 from myapp3.views import about
 
 urlpatterns = [
+    path('', about),
     path('admin/', admin.site.urls),
-    path('prefix/', include('myapp.urls')),
+    path('prefix/', include('myapp.urls')),    
     # path('', include('myapp2.urls')),
     path('less3/', include('myapp3.urls')),
-    path('', about),
+    path('les4/', include('myapp4.urls')),    
 ]

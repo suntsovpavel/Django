@@ -1507,3 +1507,124 @@ INFO 2024-05-20 16:11:31,985 basehttp 11236 12720"GET /less3/author/5 HTTP/1.1" 
 INFO 2024-05-20 16:11:32,017 basehttp 11236 12684"GET /less3/author/5/ HTTP/1.1" 200 981
 INFO 2024-05-20 16:12:04,462 basehttp 11236 12684"GET /less3/post/48 HTTP/1.1" 301 0
 INFO 2024-05-20 16:12:04,470 basehttp 11236 976"GET /less3/post/48/ HTTP/1.1" 200 653
+INFO 2024-05-21 12:25:57,166 autoreload 8672 7888Watching for file changes with StatReloader
+INFO 2024-05-21 12:25:59,482 basehttp 8672 9652"GET / HTTP/1.1" 200 1288
+WARNING 2024-05-21 12:25:59,594 log 8672 9652Not Found: /favicon.ico
+WARNING 2024-05-21 12:25:59,595 basehttp 8672 9652"GET /favicon.ico HTTP/1.1" 404 2530
+INFO 2024-05-21 12:26:21,593 basehttp 8672 9652"GET /les4/user/add HTTP/1.1" 301 0
+INFO 2024-05-21 12:26:21,662 basehttp 8672 8312"GET /les4/user/add/ HTTP/1.1" 200 550
+INFO 2024-05-21 12:30:27,603 autoreload 11844 13800Watching for file changes with StatReloader
+INFO 2024-05-21 12:30:30,660 basehttp 11844 12784"GET /les4/user/add/ HTTP/1.1" 200 776
+INFO 2024-05-21 12:31:09,803 basehttp 11844 12784"POST /les4/user/add/ HTTP/1.1" 200 825
+INFO 2024-05-21 12:31:59,635 basehttp 11844 12784"POST /les4/user/add/ HTTP/1.1" 200 825
+INFO 2024-05-21 12:32:00,604 basehttp 11844 12784"POST /les4/user/add/ HTTP/1.1" 200 825
+INFO 2024-05-21 12:34:47,042 autoreload 11844 13800C:\_GB_django\001\mydjango\myapp4\views.py changed, reloading.
+INFO 2024-05-21 12:34:47,763 autoreload 2920 1728Watching for file changes with StatReloader
+INFO 2024-05-21 12:34:52,822 basehttp 2920 12572"GET /les4/user/add/ HTTP/1.1" 200 776
+INFO 2024-05-21 12:34:58,654 basehttp 2920 12572"POST /les4/user/add/ HTTP/1.1" 200 823
+INFO 2024-05-21 12:35:33,094 autoreload 2920 1728C:\_GB_django\001\mydjango\myapp4\views.py changed, reloading.
+INFO 2024-05-21 12:35:33,750 autoreload 2336 4812Watching for file changes with StatReloader
+INFO 2024-05-21 12:45:39,210 autoreload 2336 4812C:\_GB_django\001\mydjango\myapp4\forms.py changed, reloading.
+INFO 2024-05-21 12:45:39,994 autoreload 13632 6936Watching for file changes with StatReloader
+INFO 2024-05-21 12:47:36,026 autoreload 13632 6936C:\_GB_django\001\mydjango\myapp4\views.py changed, reloading.
+INFO 2024-05-21 12:47:36,764 autoreload 1364 9476Watching for file changes with StatReloader
+INFO 2024-05-21 12:47:42,851 autoreload 1364 9476C:\_GB_django\001\mydjango\myapp4\views.py changed, reloading.
+INFO 2024-05-21 12:47:43,575 autoreload 8128 8316Watching for file changes with StatReloader
+INFO 2024-05-21 12:48:31,729 autoreload 8128 8316C:\_GB_django\001\mydjango\myapp4\views.py changed, reloading.
+INFO 2024-05-21 12:48:32,426 autoreload 8776 14300Watching for file changes with StatReloader
+INFO 2024-05-21 12:49:51,235 autoreload 8776 14300C:\_GB_django\001\mydjango\myapp4\urls.py changed, reloading.
+INFO 2024-05-21 12:49:52,041 autoreload 6684 13792Watching for file changes with StatReloader
+INFO 2024-05-21 12:51:21,288 basehttp 6684 6212"GET /les4/user/add/ HTTP/1.1" 200 776
+WARNING 2024-05-21 12:51:27,659 log 6684 6212Not Found: /les4/form/
+WARNING 2024-05-21 12:51:27,660 basehttp 6684 6212"GET /les4/form/ HTTP/1.1" 404 2784
+INFO 2024-05-21 12:52:00,940 basehttp 6684 6212"GET /les4/forms/ HTTP/1.1" 200 1448
+INFO 2024-05-21 12:54:33,549 basehttp 6684 6212"POST /les4/forms/ HTTP/1.1" 200 1527
+INFO 2024-05-21 13:34:51,135 autoreload 6684 13792C:\_GB_django\001\mydjango\myapp4\forms.py changed, reloading.
+INFO 2024-05-21 13:34:51,909 autoreload 1880 11828Watching for file changes with StatReloader
+INFO 2024-05-21 13:36:31,876 autoreload 1880 11828C:\_GB_django\001\mydjango\myapp4\views.py changed, reloading.
+INFO 2024-05-21 13:36:32,678 autoreload 1556 4948Watching for file changes with StatReloader
+INFO 2024-05-21 13:37:28,483 autoreload 1556 4948C:\_GB_django\001\mydjango\myapp4\views.py changed, reloading.
+INFO 2024-05-21 13:37:29,185 autoreload 8016 5296Watching for file changes with StatReloader
+INFO 2024-05-21 13:37:48,131 basehttp 8016 6552"GET /les4/forms/ HTTP/1.1" 200 2069
+INFO 2024-05-21 13:38:43,084 basehttp 8016 6552"POST /les4/forms/ HTTP/1.1" 200 2167
+INFO 2024-05-21 13:40:12,036 autoreload 8016 5296C:\_GB_django\001\mydjango\myapp4\forms.py changed, reloading.
+INFO 2024-05-21 13:40:12,778 autoreload 4292 5968Watching for file changes with StatReloader
+INFO 2024-05-21 13:40:38,040 basehttp 4292 11184"GET /les4/forms/ HTTP/1.1" 200 2069
+INFO 2024-05-21 13:43:31,265 autoreload 4292 5968C:\_GB_django\001\mydjango\myapp4\forms.py changed, reloading.
+INFO 2024-05-21 13:43:31,996 autoreload 6568 4276Watching for file changes with StatReloader
+INFO 2024-05-21 13:43:39,001 autoreload 6568 4276C:\_GB_django\001\mydjango\myapp4\forms.py changed, reloading.
+INFO 2024-05-21 13:43:39,690 autoreload 8700 6152Watching for file changes with StatReloader
+INFO 2024-05-21 13:59:27,036 autoreload 8700 6152C:\_GB_django\001\mydjango\myapp4\models.py changed, reloading.
+INFO 2024-05-21 13:59:27,774 autoreload 5780 5352Watching for file changes with StatReloader
+INFO 2024-05-21 14:05:05,966 autoreload 9868 11232Watching for file changes with StatReloader
+INFO 2024-05-21 14:05:14,272 basehttp 9868 11608"GET /les4/forms/ HTTP/1.1" 200 2069
+ERROR 2024-05-21 14:05:27,384 log 9868 11608Internal Server Error: /les4/user/
+Traceback (most recent call last):
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view myapp4.views.add_user didn't return an HttpResponse object. It returned None instead.
+ERROR 2024-05-21 14:05:27,387 basehttp 9868 11608"GET /les4/user/ HTTP/1.1" 500 65889
+INFO 2024-05-21 14:06:08,494 autoreload 9868 11232C:\_GB_django\001\mydjango\myapp4\views.py changed, reloading.
+INFO 2024-05-21 14:06:09,278 autoreload 7484 5988Watching for file changes with StatReloader
+INFO 2024-05-21 14:06:10,759 basehttp 7484 9692"GET /les4/user/ HTTP/1.1" 200 815
+INFO 2024-05-21 14:07:00,714 basehttp 7484 9692"GET /les4/user/ HTTP/1.1" 200 815
+INFO 2024-05-21 14:07:18,862 basehttp 7484 9692"POST /les4/user/ HTTP/1.1" 200 982
+INFO 2024-05-21 14:07:46,174 basehttp 7484 9692"POST /les4/user/ HTTP/1.1" 200 884
+INFO 2024-05-21 14:08:06,457 autoreload 7484 5988C:\_GB_django\001\mydjango\myapp4\views.py changed, reloading.
+INFO 2024-05-21 14:08:07,212 autoreload 6416 13620Watching for file changes with StatReloader
+INFO 2024-05-21 14:08:08,202 basehttp 6416 5228"GET /les4/user/ HTTP/1.1" 200 815
+INFO 2024-05-21 14:08:21,421 basehttp 6416 5228"POST /les4/user/ HTTP/1.1" 200 884
+INFO 2024-05-21 18:11:36,572 autoreload 11752 9532Watching for file changes with StatReloader
+INFO 2024-05-21 18:13:09,716 autoreload 11752 9532C:\_GB_django\001\mydjango\myapp4\forms.py changed, reloading.
+INFO 2024-05-21 18:13:10,409 autoreload 14952 14948Watching for file changes with StatReloader
+ERROR 2024-05-21 18:13:31,990 log 14952 6020Internal Server Error: /les4/upload/
+Traceback (most recent call last):
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\_GB_django\001\mydjango\myapp4\views.py", line 61, in upload_image
+    return render(request, 'myapp4/upload_image.html', {'form':form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\base.py", line 23, in get_template
+    contents = self.get_contents(origin)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\cached.py", line 26, in get_contents
+    return origin.loader.get_contents(origin)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\filesystem.py", line 22, in get_contents
+    with open(origin.name, encoding=self.engine.file_charset) as fp:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\_GB_django\\001\\mydjango\\myapp4\\templates\\myapp4\\upload_image.html'
+ERROR 2024-05-21 18:13:31,999 basehttp 14952 6020"GET /les4/upload/ HTTP/1.1" 500 111779
+WARNING 2024-05-21 18:13:32,166 log 14952 6020Not Found: /favicon.ico
+WARNING 2024-05-21 18:13:32,166 basehttp 14952 6020"GET /favicon.ico HTTP/1.1" 404 2530
+INFO 2024-05-21 18:16:16,330 basehttp 14952 6020"GET /les4/upload/ HTTP/1.1" 200 595
