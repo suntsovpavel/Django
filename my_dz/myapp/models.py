@@ -33,6 +33,9 @@ class Product(models.Model):
     amount = models.IntegerField()
     date = models.DateField(blank=False)
 
+    def __str__(self):
+        return f'name: {self.name}'
+
 # Поля модели «Заказ»:
 # — связь с моделью «Клиент», указывает на клиента, сделавшего заказ
 # — связь с моделью «Товар», указывает на товары, входящие в заказ
@@ -45,5 +48,6 @@ class Order(models.Model):
     products = models.ManyToManyField(Product)
     date_ordered = models.DateField()
     total_price = models.DecimalField(max_digits=8, decimal_places=2)
+
 
 
