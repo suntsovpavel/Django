@@ -137,3 +137,38 @@ INFO 2024-05-21 21:47:54,497 basehttp 13672 14220"GET /form_games/ HTTP/1.1" 200
 INFO 2024-05-21 21:47:59,207 basehttp 13672 14220"POST /form_games/ HTTP/1.1" 200 346
 INFO 2024-05-21 21:48:01,661 basehttp 13672 14220"GET /form_games/ HTTP/1.1" 200 773
 INFO 2024-05-21 21:48:07,872 basehttp 13672 14220"POST /form_games/ HTTP/1.1" 200 186
+INFO 2024-05-21 22:42:12,019 autoreload 1896 6024Watching for file changes with StatReloader
+INFO 2024-05-21 22:42:16,272 basehttp 1896 5272"GET /form_games/ HTTP/1.1" 200 773
+INFO 2024-05-21 22:42:22,753 basehttp 1896 5272"POST /form_games/ HTTP/1.1" 302 0
+INFO 2024-05-21 22:42:22,764 basehttp 1896 5272"GET /number/50/ HTTP/1.1" 200 322
+INFO 2024-05-21 22:44:50,468 autoreload 1896 6024C:\_GB_django\sem01\myapp\views.py changed, reloading.
+INFO 2024-05-21 22:44:51,150 autoreload 13916 7008Watching for file changes with StatReloader
+INFO 2024-05-21 22:49:00,771 autoreload 13916 7008C:\_GB_django\sem01\myapp\forms.py changed, reloading.
+INFO 2024-05-21 22:49:01,551 autoreload 7892 12908Watching for file changes with StatReloader
+INFO 2024-05-21 22:49:12,690 autoreload 7892 12908C:\_GB_django\sem01\myapp\forms.py changed, reloading.
+INFO 2024-05-21 22:49:13,350 autoreload 11860 8480Watching for file changes with StatReloader
+INFO 2024-05-21 22:51:36,660 autoreload 11860 8480C:\_GB_django\sem01\myapp\forms.py changed, reloading.
+INFO 2024-05-21 22:51:37,349 autoreload 4284 14788Watching for file changes with StatReloader
+INFO 2024-05-21 22:53:14,600 autoreload 4284 14788C:\_GB_django\sem01\myapp\forms.py changed, reloading.
+INFO 2024-05-21 22:53:15,288 autoreload 14968 11456Watching for file changes with StatReloader
+INFO 2024-05-21 23:08:48,950 autoreload 1440 9464Watching for file changes with StatReloader
+INFO 2024-05-21 23:09:19,659 basehttp 1440 6432"GET /add_author HTTP/1.1" 301 0
+ERROR 2024-05-21 23:09:19,705 log 1440 8444Internal Server Error: /add_author/
+Traceback (most recent call last):
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\_GB_django\sem01\myapp\views.py", line 145, in add_author
+    'message': message,
+               ^^^^^^^
+UnboundLocalError: cannot access local variable 'message' where it is not associated with a value
+ERROR 2024-05-21 23:09:19,708 basehttp 1440 8444"GET /add_author/ HTTP/1.1" 500 65298
+INFO 2024-05-21 23:10:02,452 autoreload 1440 9464C:\_GB_django\sem01\myapp\views.py changed, reloading.
+INFO 2024-05-21 23:10:03,112 autoreload 15000 14080Watching for file changes with StatReloader
+INFO 2024-05-21 23:10:43,754 autoreload 15000 14080C:\_GB_django\sem01\myapp\views.py changed, reloading.
+INFO 2024-05-21 23:10:44,417 autoreload 8180 8572Watching for file changes with StatReloader
+INFO 2024-05-21 23:10:49,484 basehttp 8180 7484"GET /add_author/ HTTP/1.1" 200 1239
+INFO 2024-05-21 23:12:11,201 basehttp 8180 7484"POST /add_author/ HTTP/1.1" 200 1391

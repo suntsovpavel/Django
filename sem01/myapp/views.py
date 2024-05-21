@@ -1,10 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from django.http import HttpResponse
 import random
 import logging
 from .models import Game, Author
 from datetime import date
-from .forms import GamesForm
+from .forms import GamesForm, AuthorForm
 
 logger = logging.getLogger(__name__)
 
@@ -90,7 +90,8 @@ def form_games(request):
             elif  game_type == 'cube':
                 return cube(request, num_tries)                
             else:
-                return number(request, num_tries)    
+                # return number(request, num_tries)    
+                return redirect(number, num_tries)
     else:
         form = GamesForm()                                   
     return render(request, 'myapp/all_games.html', {'title': 'games 3 in 1', 'form':form})
@@ -115,6 +116,34 @@ def create_authors(request):
         author.save()
         result.append(author.fullname())
     return HttpResponse(f'{result}')  
+
+# sem4
+# Продолжаем работу с авторами, статьями и комментариями.
+# Создайте форму для добавления нового автора в базу данных.
+# Используйте ранее созданную модель Author
+def add_author(request):
+    message = 'Некорректные данные'
+    if request.method == 'POST':
+        form = AuthorForm(request.POST)        
+        if form.is_valid():
+            name = form.cleaned_data['name']    
+            lastname = form.cleaned_data['lastname']    
+            email = form.cleaned_data['email']    
+            biography = form.cleaned_data['biography']    
+            birthday = form.cleaned_data['birthday'] 
+            author = Author(name=name,
+                            lastname=lastname,
+                            email=email,
+                            biography=biography,
+                            birthday= birthday)
+            author.save()
+            message = 'Автор добавлен в БД'
+    else:
+        message = 'Заполните форму'
+        form = AuthorForm()
+    return render(request, 'myapp/add_author.html', {'title': 'add author in DB', 
+                                                    'message': message,
+                                                    'form':form})               
 
 # sem3
 # Создайте модель Статья (публикация). 
