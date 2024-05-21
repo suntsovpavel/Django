@@ -89,3 +89,51 @@ INFO 2024-05-20 20:32:22,291 autoreload 3416 1376C:\_GB_django\sem01\myapp\views
 INFO 2024-05-20 20:32:22,911 autoreload 12992 13068Watching for file changes with StatReloader
 INFO 2024-05-20 20:52:44,863 autoreload 12992 13068C:\_GB_django\sem01\myapp\views.py changed, reloading.
 INFO 2024-05-20 20:52:45,784 autoreload 7484 8120Watching for file changes with StatReloader
+INFO 2024-05-21 21:39:26,693 autoreload 11284 12136Watching for file changes with StatReloader
+INFO 2024-05-21 21:41:24,420 autoreload 8656 9672Watching for file changes with StatReloader
+INFO 2024-05-21 21:41:27,752 basehttp 8656 10316"GET / HTTP/1.1" 200 202
+WARNING 2024-05-21 21:41:52,199 log 8656 10316Not Found: /form_games
+WARNING 2024-05-21 21:41:52,200 basehttp 8656 10316"GET /form_games HTTP/1.1" 404 3506
+INFO 2024-05-21 21:42:13,733 autoreload 8656 9672C:\_GB_django\sem01\myapp\urls.py changed, reloading.
+INFO 2024-05-21 21:42:14,490 autoreload 9336 15248Watching for file changes with StatReloader
+INFO 2024-05-21 21:42:19,460 autoreload 9336 15248C:\_GB_django\sem01\myapp\urls.py changed, reloading.
+INFO 2024-05-21 21:42:20,179 autoreload 13352 9264Watching for file changes with StatReloader
+INFO 2024-05-21 21:42:21,398 basehttp 13352 1080"GET /form_games HTTP/1.1" 301 0
+ERROR 2024-05-21 21:42:21,478 log 13352 14776Internal Server Error: /form_games/
+Traceback (most recent call last):
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view myapp.views.form_games didn't return an HttpResponse object. It returned None instead.
+ERROR 2024-05-21 21:42:21,481 basehttp 13352 14776"GET /form_games/ HTTP/1.1" 500 66034
+INFO 2024-05-21 21:44:08,130 autoreload 13352 9264C:\_GB_django\sem01\myapp\views.py changed, reloading.
+INFO 2024-05-21 21:44:08,830 autoreload 8624 14796Watching for file changes with StatReloader
+ERROR 2024-05-21 21:44:10,204 log 8624 8648Internal Server Error: /form_games/
+Traceback (most recent call last):
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\_GB_django\sem01\myapp\views.py", line 94, in form_games
+    return render(request, 'myapp/all_games.html', {'title': 'games 3 in 1', 'form':form})
+                                                                                    ^^^^
+UnboundLocalError: cannot access local variable 'form' where it is not associated with a value
+ERROR 2024-05-21 21:44:10,207 basehttp 8624 8648"GET /form_games/ HTTP/1.1" 500 65535
+INFO 2024-05-21 21:45:38,934 autoreload 8624 14796C:\_GB_django\sem01\myapp\views.py changed, reloading.
+INFO 2024-05-21 21:45:39,633 autoreload 6332 14672Watching for file changes with StatReloader
+INFO 2024-05-21 21:45:43,412 basehttp 6332 14860"GET /form_games/ HTTP/1.1" 200 773
+INFO 2024-05-21 21:45:51,129 basehttp 6332 14860"POST /form_games/ HTTP/1.1" 200 793
+INFO 2024-05-21 21:47:31,209 autoreload 6332 14672C:\_GB_django\sem01\myapp\views.py changed, reloading.
+INFO 2024-05-21 21:47:31,921 autoreload 13672 5292Watching for file changes with StatReloader
+INFO 2024-05-21 21:47:44,189 basehttp 13672 14220"GET /form_games/ HTTP/1.1" 200 773
+INFO 2024-05-21 21:47:48,593 basehttp 13672 14220"POST /form_games/ HTTP/1.1" 200 166
+INFO 2024-05-21 21:47:54,497 basehttp 13672 14220"GET /form_games/ HTTP/1.1" 200 773
+INFO 2024-05-21 21:47:59,207 basehttp 13672 14220"POST /form_games/ HTTP/1.1" 200 346
+INFO 2024-05-21 21:48:01,661 basehttp 13672 14220"GET /form_games/ HTTP/1.1" 200 773
+INFO 2024-05-21 21:48:07,872 basehttp 13672 14220"POST /form_games/ HTTP/1.1" 200 186

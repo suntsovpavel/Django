@@ -11,4 +11,5 @@ urlpatterns = [
  path('game/', views.game, name='game'),
  path('statistic/', views.statistic, name='statistic'),
  path('create_authors/', views.create_authors, name='create_authors'),
+ path('form_games/', views.form_games, name='form_games'),
 ]

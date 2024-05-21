@@ -4,6 +4,7 @@ import random
 import logging
 from .models import Game, Author
 from datetime import date
+from .forms import GamesForm
 
 logger = logging.getLogger(__name__)
 
@@ -45,32 +46,11 @@ def game(request):
 def statistic(request):
     n = 5
     return HttpResponse(Game.statistic(n))
-
-# 3. Создайте модель Автор. Модель должна содержать
-# следующие поля:
-# ○ имя до 100 символов
-# ○ фамилия до 100 символов
-# ○ почта
-# ○ биография
-# ○ день рождения
-# Дополнительно создай пользовательское поле “полное имя”, которое возвращает имя и фамилию.
-# see models.py, class Author
-def create_authors(request):
-    result = []
-    for i in range(10):
-        author = Author(name=f'name{i}',
-                        lastname=f'lastname{i}',
-                        biography=f'biography{i}',
-                        birthday=date.today())
-        author.save()
-        result.append(author.fullname())
-    return HttpResponse(f'{result}')        
-
+    
 # sem 3
 # Доработаем задачу 7 из урока 1, где бросали монетку,
 # игральную кость и генерировали случайное число.
-# Маршруты могут принимать целое число - количество
-# бросков.
+# Маршруты могут принимать целое число - количество бросков.
 # Представления создают список с результатами бросков и
 # передают его в контекст шаблона.
 # Необходимо создать универсальный шаблон для вывода
@@ -93,6 +73,49 @@ def number(request, num: int):
                'content' : result}
     return render (request, 'myapp/games.html', context)
 
+# sem4
+# Доработаем задачу про броски монеты, игральной кости и случайного числа.
+# Создайте форму, которая предлагает выбрать: монета, кости, числа.
+# Второе поле предлагает указать количество попыток от 1 до 64.
+def form_games(request):
+    if request.method == 'POST':
+        form = GamesForm(request.POST)
+        if form.is_valid():
+            game_type = form.cleaned_data['game_type']
+            num_tries = form.cleaned_data['num_tries']
+            print(f'game_type: {game_type}, num_tries: {num_tries}')
+            # задействуем созданные ранее функции
+            if game_type == 'coin':
+                return coin(request, num_tries) 
+            elif  game_type == 'cube':
+                return cube(request, num_tries)                
+            else:
+                return number(request, num_tries)    
+    else:
+        form = GamesForm()                                   
+    return render(request, 'myapp/all_games.html', {'title': 'games 3 in 1', 'form':form})
+
+
+
+# 3. Создайте модель Автор. Модель должна содержать следующие поля:
+# ○ имя до 100 символов
+# ○ фамилия до 100 символов
+# ○ почта
+# ○ биография
+# ○ день рождения
+# Дополнительно создай пользовательское поле “полное имя”, которое возвращает имя и фамилию.
+# see models.py, class Author
+def create_authors(request):
+    result = []
+    for i in range(10):
+        author = Author(name=f'name{i}',
+                        lastname=f'lastname{i}',
+                        biography=f'biography{i}',
+                        birthday=date.today())
+        author.save()
+        result.append(author.fullname())
+    return HttpResponse(f'{result}')  
+
 # sem3
 # Создайте модель Статья (публикация). 
 # Авторы из прошлой задачи могут писать статьи. 
@@ -101,7 +124,7 @@ def number(request, num: int):
 # ○ заголовок статьи с максимальной длиной 200 символов
 # ○ содержание статьи
 # ○ дата публикации статьи
-# ○ автор статьи с удалением связанных объектов при удалении автора
+# ○ автор статьи (с удалением связанных объектов при удалении автора)
 # ○ категория статьи с максимальной длиной 100 символов
 # ○ количество просмотров статьи со значением по умолчанию 0
 # ○ флаг, указывающий, опубликована ли статья, со значением по умолчанию False
