@@ -1,0 +1,16 @@
+{% extends 'myapp/base.html' %}
+
+{% block title %}Список заказов{% endblock %}
+
+{% block content %} 
+    {% if incorrect_product %}
+        <p>Введен некорректный id товара</p>
+    {% else %}
+        <img src="{{path_image}}"></img>
+        <p>Наименование: {{ name }}</p>
+        <p>Описание: {{ description }}</p>
+        <p>Стоимость: {{ price }}</p>
+        <p>Количество единиц: {{ amount }}</p>
+        <p>Дата регистрации: {{ date }}</p>
+    {% endif %}    
+{% endblock %}

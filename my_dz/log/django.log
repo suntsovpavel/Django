@@ -450,3 +450,303 @@ INFO 2024-05-22 10:13:18,422 autoreload 8520 2820C:\_GB_django\my_dz\myapp\forms
 INFO 2024-05-22 10:13:19,132 autoreload 13412 12592Watching for file changes with StatReloader
 INFO 2024-05-22 10:13:21,298 basehttp 13412 5704"GET /edit_product/ HTTP/1.1" 200 1333
 INFO 2024-05-22 10:13:58,341 basehttp 13412 5704"POST /edit_product/ HTTP/1.1" 200 1431
+INFO 2024-05-22 10:28:14,580 autoreload 6832 12772Watching for file changes with StatReloader
+INFO 2024-05-22 10:28:19,069 basehttp 6832 6960"GET /edit_product/ HTTP/1.1" 200 1333
+ERROR 2024-05-22 10:28:37,527 log 6832 6960Internal Server Error: /edit_product/
+Traceback (most recent call last):
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: myapp_product.picture
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\_GB_django\my_dz\myapp\views.py", line 80, in edit_product
+    product = Product.objects.filter(pk=pk).first()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 1097, in first
+    for obj in queryset[:1]:
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 400, in __iter__
+    self._fetch_all()
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: myapp_product.picture
+ERROR 2024-05-22 10:28:37,537 basehttp 6832 6960"POST /edit_product/ HTTP/1.1" 500 135709
+INFO 2024-05-22 10:32:30,528 autoreload 6832 12772C:\_GB_django\my_dz\myapp\views.py changed, reloading.
+INFO 2024-05-22 10:32:31,208 autoreload 13336 10124Watching for file changes with StatReloader
+INFO 2024-05-22 10:33:40,097 autoreload 13336 10124C:\_GB_django\my_dz\myapp\views.py changed, reloading.
+INFO 2024-05-22 10:33:40,868 autoreload 7252 2312Watching for file changes with StatReloader
+INFO 2024-05-22 10:34:30,880 autoreload 7252 2312C:\_GB_django\my_dz\myapp\forms.py changed, reloading.
+INFO 2024-05-22 10:34:31,562 autoreload 12668 4220Watching for file changes with StatReloader
+INFO 2024-05-22 10:34:51,090 autoreload 12668 4220C:\_GB_django\my_dz\myapp\forms.py changed, reloading.
+INFO 2024-05-22 10:34:51,769 autoreload 6692 2064Watching for file changes with StatReloader
+INFO 2024-05-22 10:34:53,446 autoreload 6692 2064C:\_GB_django\my_dz\myapp\forms.py changed, reloading.
+INFO 2024-05-22 10:34:54,162 autoreload 7444 8452Watching for file changes with StatReloader
+INFO 2024-05-22 10:35:14,788 autoreload 7444 8452C:\_GB_django\my_dz\myapp\views.py changed, reloading.
+INFO 2024-05-22 10:35:15,449 autoreload 3604 13628Watching for file changes with StatReloader
+INFO 2024-05-22 10:35:42,376 autoreload 3604 13628C:\_GB_django\my_dz\myapp\forms.py changed, reloading.
+INFO 2024-05-22 10:35:43,063 autoreload 7892 15300Watching for file changes with StatReloader
+INFO 2024-05-22 10:36:34,168 autoreload 7892 15300C:\_GB_django\my_dz\myapp\forms.py changed, reloading.
+INFO 2024-05-22 10:36:34,863 autoreload 11520 11804Watching for file changes with StatReloader
+INFO 2024-05-22 10:38:51,604 autoreload 11520 11804C:\_GB_django\my_dz\myapp\views.py changed, reloading.
+INFO 2024-05-22 10:38:52,298 autoreload 3560 6656Watching for file changes with StatReloader
+INFO 2024-05-22 10:39:06,601 autoreload 3560 6656C:\_GB_django\my_dz\myapp\models.py changed, reloading.
+INFO 2024-05-22 10:39:07,295 autoreload 928 9604Watching for file changes with StatReloader
+INFO 2024-05-22 10:39:08,939 autoreload 928 9604C:\_GB_django\my_dz\myapp\models.py changed, reloading.
+INFO 2024-05-22 10:39:09,600 autoreload 5980 11120Watching for file changes with StatReloader
+INFO 2024-05-22 10:48:39,919 autoreload 5980 11120C:\_GB_django\my_dz\myapp\models.py changed, reloading.
+INFO 2024-05-22 10:48:40,620 autoreload 3584 4700Watching for file changes with StatReloader
+INFO 2024-05-22 10:48:42,260 autoreload 3584 4700C:\_GB_django\my_dz\myapp\models.py changed, reloading.
+INFO 2024-05-22 10:48:42,942 autoreload 6276 11492Watching for file changes with StatReloader
+INFO 2024-05-22 10:49:19,252 autoreload 6276 11492C:\_GB_django\my_dz\myapp\views.py changed, reloading.
+INFO 2024-05-22 10:49:19,914 autoreload 2452 13808Watching for file changes with StatReloader
+INFO 2024-05-22 10:50:03,558 autoreload 2452 13808C:\_GB_django\my_dz\myapp\views.py changed, reloading.
+INFO 2024-05-22 10:50:04,184 autoreload 1488 2776Watching for file changes with StatReloader
+INFO 2024-05-22 10:50:14,238 autoreload 1488 2776C:\_GB_django\my_dz\myapp\views.py changed, reloading.
+INFO 2024-05-22 10:50:14,910 autoreload 11004 7672Watching for file changes with StatReloader
+INFO 2024-05-22 10:51:42,717 autoreload 11004 7672C:\_GB_django\my_dz\myapp\views.py changed, reloading.
+INFO 2024-05-22 10:51:43,419 autoreload 10496 13272Watching for file changes with StatReloader
+INFO 2024-05-22 10:52:34,531 autoreload 10496 13272C:\_GB_django\my_dz\myapp\views.py changed, reloading.
+INFO 2024-05-22 10:52:35,233 autoreload 2528 1292Watching for file changes with StatReloader
+INFO 2024-05-22 10:53:24,187 autoreload 2528 1292C:\_GB_django\my_dz\myapp\views.py changed, reloading.
+INFO 2024-05-22 10:53:24,915 autoreload 2596 10352Watching for file changes with StatReloader
+INFO 2024-05-22 10:57:07,569 autoreload 4792 14976Watching for file changes with StatReloader
+INFO 2024-05-22 10:57:14,499 basehttp 4792 3880"GET /add_product/ HTTP/1.1" 200 1352
+INFO 2024-05-22 11:00:02,241 autoreload 4792 14976C:\_GB_django\my_dz\myapp\views.py changed, reloading.
+INFO 2024-05-22 11:00:03,492 autoreload 6628 1148Watching for file changes with StatReloader
+INFO 2024-05-22 11:00:05,170 basehttp 6628 12616"GET /add_product/ HTTP/1.1" 200 1351
+INFO 2024-05-22 11:03:15,530 basehttp 6628 12616"POST /add_product/ HTTP/1.1" 200 1514
+INFO 2024-05-22 11:04:06,837 basehttp 6628 12616"POST /add_product/ HTTP/1.1" 200 1514
+INFO 2024-05-22 11:05:19,367 autoreload 8544 10216Watching for file changes with StatReloader
+INFO 2024-05-22 11:05:23,173 basehttp 8544 15264"GET /add_product/ HTTP/1.1" 200 1351
+INFO 2024-05-22 11:06:10,955 basehttp 8544 15264"POST /add_product/ HTTP/1.1" 200 1514
+INFO 2024-05-22 11:08:19,033 basehttp 8544 15264"GET /add_product/ HTTP/1.1" 200 1381
+INFO 2024-05-22 11:08:44,693 basehttp 8544 15264"POST /add_product/ HTTP/1.1" 200 1470
+INFO 2024-05-22 11:10:43,044 autoreload 8544 10216C:\_GB_django\my_dz\myapp\models.py changed, reloading.
+INFO 2024-05-22 11:10:43,761 autoreload 9932 5504Watching for file changes with StatReloader
+INFO 2024-05-22 11:10:45,451 autoreload 9932 5504C:\_GB_django\my_dz\myapp\models.py changed, reloading.
+INFO 2024-05-22 11:10:46,107 autoreload 1992 5996Watching for file changes with StatReloader
+INFO 2024-05-22 11:11:23,498 autoreload 1992 5996C:\_GB_django\my_dz\myapp\views.py changed, reloading.
+INFO 2024-05-22 11:11:24,155 autoreload 4424 9984Watching for file changes with StatReloader
+INFO 2024-05-22 11:17:26,169 autoreload 4424 9984C:\_GB_django\my_dz\myapp\views.py changed, reloading.
+INFO 2024-05-22 11:17:26,884 autoreload 2788 1620Watching for file changes with StatReloader
+INFO 2024-05-22 11:20:56,968 autoreload 2788 1620C:\_GB_django\my_dz\myapp\views.py changed, reloading.
+INFO 2024-05-22 11:20:57,624 autoreload 9344 8752Watching for file changes with StatReloader
+INFO 2024-05-22 11:21:06,735 autoreload 9344 8752C:\_GB_django\my_dz\myapp\forms.py changed, reloading.
+INFO 2024-05-22 11:21:07,404 autoreload 14696 10548Watching for file changes with StatReloader
+INFO 2024-05-22 11:21:30,062 autoreload 14696 10548C:\_GB_django\my_dz\myapp\views.py changed, reloading.
+INFO 2024-05-22 11:21:30,722 autoreload 13140 4228Watching for file changes with StatReloader
+INFO 2024-05-22 11:21:38,656 autoreload 13140 4228C:\_GB_django\my_dz\myapp\views.py changed, reloading.
+INFO 2024-05-22 11:21:39,336 autoreload 11352 11528Watching for file changes with StatReloader
+INFO 2024-05-22 11:21:41,018 autoreload 11352 11528C:\_GB_django\my_dz\myapp\views.py changed, reloading.
+INFO 2024-05-22 11:21:41,688 autoreload 9188 7736Watching for file changes with StatReloader
+INFO 2024-05-22 11:23:50,512 autoreload 9188 7736C:\_GB_django\my_dz\myapp\urls.py changed, reloading.
+INFO 2024-05-22 11:23:51,204 autoreload 13436 8304Watching for file changes with StatReloader
+INFO 2024-05-22 11:28:43,596 autoreload 13448 10052Watching for file changes with StatReloader
+WARNING 2024-05-22 11:28:55,718 log 13448 3716Not Found: /show_product/
+WARNING 2024-05-22 11:28:55,719 basehttp 13448 3716"GET /show_product/ HTTP/1.1" 404 3203
+INFO 2024-05-22 11:29:00,336 basehttp 13448 3716"GET /show_product/1 HTTP/1.1" 301 0
+ERROR 2024-05-22 11:29:00,395 log 13448 15080Internal Server Error: /show_product/1/
+Traceback (most recent call last):
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: show_product() got an unexpected keyword argument 'pk_user'
+ERROR 2024-05-22 11:29:00,397 basehttp 13448 15080"GET /show_product/1/ HTTP/1.1" 500 61285
+INFO 2024-05-22 11:29:34,191 autoreload 13448 10052C:\_GB_django\my_dz\myapp\urls.py changed, reloading.
+INFO 2024-05-22 11:29:34,903 autoreload 5212 956Watching for file changes with StatReloader
+INFO 2024-05-22 11:29:36,786 basehttp 5212 2324"GET /show_product/1/ HTTP/1.1" 200 461
+INFO 2024-05-22 11:30:07,323 basehttp 5212 2324"GET /show_product/21/ HTTP/1.1" 200 442
+INFO 2024-05-22 11:31:15,126 basehttp 5212 2324"GET /show_product/21/ HTTP/1.1" 200 447
+INFO 2024-05-22 11:31:52,207 basehttp 5212 2324"GET /show_product/21/ HTTP/1.1" 200 441
+INFO 2024-05-22 11:32:45,176 basehttp 5212 2324"GET /show_product/21/ HTTP/1.1" 200 446
+INFO 2024-05-22 11:33:29,761 basehttp 5212 2324"GET /show_product/21/ HTTP/1.1" 200 446
+INFO 2024-05-22 11:33:59,084 basehttp 5212 2324"GET /show_product/21/ HTTP/1.1" 200 431
+INFO 2024-05-22 11:34:00,895 basehttp 5212 2324"GET /show_product/21/ HTTP/1.1" 200 431
+INFO 2024-05-22 11:34:31,689 basehttp 5212 2324"GET /show_product/21/ HTTP/1.1" 200 437
+INFO 2024-05-22 11:34:40,977 basehttp 5212 2324"GET /show_product/21/ HTTP/1.1" 200 437
+INFO 2024-05-22 11:34:42,324 basehttp 5212 2324"GET /show_product/21/ HTTP/1.1" 200 437
+INFO 2024-05-22 11:34:43,243 basehttp 5212 2324"GET /show_product/21/ HTTP/1.1" 200 437
+INFO 2024-05-22 11:35:46,831 autoreload 6468 11752Watching for file changes with StatReloader
+INFO 2024-05-22 11:35:50,557 basehttp 6468 7148"GET /show_product/21/ HTTP/1.1" 200 446
+INFO 2024-05-22 11:35:51,956 basehttp 6468 7148"GET /show_product/21/ HTTP/1.1" 200 446
+INFO 2024-05-22 11:35:53,030 basehttp 6468 7148"GET /show_product/21/ HTTP/1.1" 200 446
+INFO 2024-05-22 11:35:53,607 basehttp 6468 7148"GET /show_product/21/ HTTP/1.1" 200 446
+INFO 2024-05-22 11:39:03,422 autoreload 6468 11752C:\_GB_django\my_dz\myapp\views.py changed, reloading.
+INFO 2024-05-22 11:39:04,110 autoreload 7172 11560Watching for file changes with StatReloader
+INFO 2024-05-22 11:39:05,746 autoreload 7172 11560C:\_GB_django\my_dz\myapp\views.py changed, reloading.
+INFO 2024-05-22 11:39:06,430 autoreload 11276 14512Watching for file changes with StatReloader
+INFO 2024-05-22 11:39:17,427 basehttp 11276 8140"GET /add_product/ HTTP/1.1" 200 1381
+ERROR 2024-05-22 11:39:40,846 log 11276 8140Internal Server Error: /add_product/
+Traceback (most recent call last):
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\_GB_django\my_dz\myapp\views.py", line 134, in add_product
+    product = Product(name = name,description = description,price = price,amount = amount,date = date,image = image.path)
+                                                                                                              ^^^^^^^^^^
+AttributeError: 'InMemoryUploadedFile' object has no attribute 'path'
+ERROR 2024-05-22 11:39:40,849 basehttp 11276 8140"POST /add_product/ HTTP/1.1" 500 68695
+INFO 2024-05-22 11:42:05,128 autoreload 11276 14512C:\_GB_django\my_dz\myapp\views.py changed, reloading.
+INFO 2024-05-22 11:42:05,871 autoreload 11120 10984Watching for file changes with StatReloader
+ERROR 2024-05-22 11:42:15,682 log 11120 15260Internal Server Error: /show_product/21/
+Traceback (most recent call last):
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\_GB_django\my_dz\myapp\views.py", line 82, in show_product
+    'path_image': settings.MEDIA_ROOT + product.image }
+                  ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'WindowsPath' and 'str'
+ERROR 2024-05-22 11:42:15,685 basehttp 11120 15260"GET /show_product/21/ HTTP/1.1" 500 65453
+INFO 2024-05-22 11:43:00,645 autoreload 11120 10984C:\_GB_django\my_dz\myapp\views.py changed, reloading.
+INFO 2024-05-22 11:43:01,340 autoreload 8852 11632Watching for file changes with StatReloader
+INFO 2024-05-22 11:44:43,867 autoreload 8852 11632C:\_GB_django\my_dz\myapp\views.py changed, reloading.
+INFO 2024-05-22 11:44:44,588 autoreload 10680 3192Watching for file changes with StatReloader
+INFO 2024-05-22 11:45:07,201 autoreload 10680 3192C:\_GB_django\my_dz\myapp\views.py changed, reloading.
+INFO 2024-05-22 11:45:07,799 autoreload 12900 15348Watching for file changes with StatReloader
+ERROR 2024-05-22 11:45:08,424 log 12900 4800Internal Server Error: /show_product/21/
+Traceback (most recent call last):
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\_GB_django\my_dz\myapp\views.py", line 83, in show_product
+    'path_image': settings.MEDIA_ROOT + product.image }
+                  ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'WindowsPath' and 'str'
+ERROR 2024-05-22 11:45:08,427 basehttp 12900 4800"GET /show_product/21/ HTTP/1.1" 500 65590
+INFO 2024-05-22 11:46:24,181 autoreload 12900 15348C:\_GB_django\my_dz\myapp\views.py changed, reloading.
+INFO 2024-05-22 11:46:24,871 autoreload 6152 12800Watching for file changes with StatReloader
+INFO 2024-05-22 11:46:27,250 basehttp 6152 1096"GET /show_product/21/ HTTP/1.1" 200 472
+INFO 2024-05-22 11:46:57,815 basehttp 6152 1096"GET /show_product/21/ HTTP/1.1" 200 457
+INFO 2024-05-22 11:47:49,276 basehttp 6152 1096"GET /show_product/21/ HTTP/1.1" 200 457
+INFO 2024-05-22 11:50:06,581 autoreload 6152 12800C:\_GB_django\my_dz\myapp\views.py changed, reloading.
+INFO 2024-05-22 11:50:07,260 autoreload 6840 15108Watching for file changes with StatReloader
+INFO 2024-05-22 11:50:27,817 autoreload 6840 15108C:\_GB_django\my_dz\myapp\views.py changed, reloading.
+INFO 2024-05-22 11:50:28,478 autoreload 6568 13960Watching for file changes with StatReloader
+INFO 2024-05-22 11:50:30,126 autoreload 6568 13960C:\_GB_django\my_dz\myapp\views.py changed, reloading.
+INFO 2024-05-22 11:50:30,863 autoreload 3764 14952Watching for file changes with StatReloader
+INFO 2024-05-22 11:50:32,081 basehttp 3764 13344"GET /show_product/21/ HTTP/1.1" 200 457
+INFO 2024-05-22 11:53:42,909 autoreload 3764 14952C:\_GB_django\my_dz\myapp\views.py changed, reloading.
+INFO 2024-05-22 11:53:43,583 autoreload 7464 10548Watching for file changes with StatReloader
+INFO 2024-05-22 11:54:10,349 autoreload 7464 10548C:\_GB_django\my_dz\myapp\views.py changed, reloading.
+INFO 2024-05-22 11:54:11,030 autoreload 7432 8272Watching for file changes with StatReloader
+INFO 2024-05-22 11:54:22,167 autoreload 7432 8272C:\_GB_django\my_dz\myapp\views.py changed, reloading.
+INFO 2024-05-22 11:54:22,856 autoreload 10032 3464Watching for file changes with StatReloader
+INFO 2024-05-22 11:55:09,835 autoreload 10032 3464C:\_GB_django\my_dz\myapp\views.py changed, reloading.
+INFO 2024-05-22 11:55:10,565 autoreload 3484 768Watching for file changes with StatReloader
+INFO 2024-05-22 11:55:11,694 basehttp 3484 4840"GET /show_product/21/ HTTP/1.1" 200 446
+WARNING 2024-05-22 11:55:11,730 log 3484 4840Not Found: /media/bike.png
+WARNING 2024-05-22 11:55:11,731 basehttp 3484 4840"GET /media/bike.png HTTP/1.1" 404 3201
+INFO 2024-05-22 11:55:14,811 basehttp 3484 4840"GET /show_product/21/ HTTP/1.1" 200 446
+WARNING 2024-05-22 11:55:14,839 log 3484 4840Not Found: /media/bike.png
+WARNING 2024-05-22 11:55:14,840 basehttp 3484 4840"GET /media/bike.png HTTP/1.1" 404 3201
+INFO 2024-05-22 11:56:32,338 autoreload 3484 768C:\_GB_django\my_dz\myapp\views.py changed, reloading.
+INFO 2024-05-22 11:56:33,037 autoreload 6324 12880Watching for file changes with StatReloader
+INFO 2024-05-22 11:57:19,939 autoreload 6324 12880C:\_GB_django\my_dz\myapp\views.py changed, reloading.
+INFO 2024-05-22 11:57:20,626 autoreload 8816 6296Watching for file changes with StatReloader
+INFO 2024-05-22 11:58:45,318 autoreload 8816 6296C:\_GB_django\my_dz\myapp\views.py changed, reloading.
+INFO 2024-05-22 11:58:46,007 autoreload 7616 13888Watching for file changes with StatReloader
+INFO 2024-05-22 12:00:12,902 autoreload 7616 13888C:\_GB_django\my_dz\myapp\views.py changed, reloading.
+INFO 2024-05-22 12:00:13,577 autoreload 14872 8140Watching for file changes with StatReloader
+INFO 2024-05-22 12:00:24,658 autoreload 14872 8140C:\_GB_django\my_dz\myapp\views.py changed, reloading.
+INFO 2024-05-22 12:00:25,306 autoreload 13384 8936Watching for file changes with StatReloader
+INFO 2024-05-22 12:00:35,226 basehttp 13384 5472"GET /show_product/21/ HTTP/1.1" 200 439
+WARNING 2024-05-22 12:00:35,269 log 13384 5472Not Found: /media//bike.png
+WARNING 2024-05-22 12:00:35,270 basehttp 13384 5472"GET /media//bike.png HTTP/1.1" 404 3204
+INFO 2024-05-22 12:01:20,176 autoreload 13384 8936C:\_GB_django\my_dz\myapp\views.py changed, reloading.
+INFO 2024-05-22 12:01:20,896 autoreload 10576 12468Watching for file changes with StatReloader
+ERROR 2024-05-22 12:01:22,258 log 10576 1652Internal Server Error: /show_product/21/
+Traceback (most recent call last):
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\_GB_django\my_dz\myapp\views.py", line 85, in show_product
+    'path_image': MEDIA_ROOT + '/' + product.image }
+                  ~~~~~~~~~~~^~~~~
+TypeError: unsupported operand type(s) for +: 'WindowsPath' and 'str'
+ERROR 2024-05-22 12:01:22,261 basehttp 10576 1652"GET /show_product/21/ HTTP/1.1" 500 65566
+INFO 2024-05-22 12:01:59,512 autoreload 10576 12468C:\_GB_django\my_dz\myapp\views.py changed, reloading.
+INFO 2024-05-22 12:02:00,219 autoreload 13408 7204Watching for file changes with StatReloader
+INFO 2024-05-22 12:02:01,922 autoreload 13408 7204C:\_GB_django\my_dz\myapp\views.py changed, reloading.
+INFO 2024-05-22 12:02:02,620 autoreload 6168 8052Watching for file changes with StatReloader
+INFO 2024-05-22 12:02:03,644 basehttp 6168 10352"GET /show_product/21/ HTTP/1.1" 200 457
+INFO 2024-05-22 12:02:54,916 autoreload 6168 8052C:\_GB_django\my_dz\myapp\views.py changed, reloading.
+INFO 2024-05-22 12:02:55,606 autoreload 12624 9316Watching for file changes with StatReloader
+INFO 2024-05-22 12:03:04,616 autoreload 12624 9316C:\_GB_django\my_dz\myapp\views.py changed, reloading.
+INFO 2024-05-22 12:03:05,286 autoreload 6916 6524Watching for file changes with StatReloader
+INFO 2024-05-22 12:03:06,952 autoreload 6916 6524C:\_GB_django\my_dz\myapp\views.py changed, reloading.
+INFO 2024-05-22 12:03:07,624 autoreload 4216 12972Watching for file changes with StatReloader
+INFO 2024-05-22 12:03:27,121 autoreload 4216 12972C:\_GB_django\my_dz\myapp\views.py changed, reloading.
+INFO 2024-05-22 12:03:27,787 autoreload 8084 10424Watching for file changes with StatReloader
+INFO 2024-05-22 12:03:29,471 autoreload 8084 10424C:\_GB_django\my_dz\myapp\views.py changed, reloading.
+INFO 2024-05-22 12:03:30,175 autoreload 1296 9032Watching for file changes with StatReloader
+INFO 2024-05-22 12:03:33,608 basehttp 1296 12164"GET /show_product/21/ HTTP/1.1" 200 457
+INFO 2024-05-22 12:09:15,998 autoreload 1296 9032C:\_GB_django\my_dz\myapp\models.py changed, reloading.
+INFO 2024-05-22 12:09:16,665 autoreload 14740 10208Watching for file changes with StatReloader
+INFO 2024-05-22 12:09:19,090 autoreload 14740 10208C:\_GB_django\my_dz\myapp\models.py changed, reloading.
+INFO 2024-05-22 12:09:19,730 autoreload 2644 2604Watching for file changes with StatReloader
+INFO 2024-05-22 12:12:16,123 autoreload 14644 13700Watching for file changes with StatReloader
+INFO 2024-05-22 12:12:18,922 views 14644 7188Index page accessed
+INFO 2024-05-22 12:12:18,933 basehttp 14644 7188"GET / HTTP/1.1" 200 3223
+INFO 2024-05-22 12:13:43,940 basehttp 14644 7188"GET /list_orders/2/ HTTP/1.1" 200 5760
+INFO 2024-05-22 12:14:32,022 basehttp 14644 7188"GET /show_product/21/ HTTP/1.1" 200 468
+WARNING 2024-05-22 12:17:40,964 log 14644 7188Not Found: /edit_product/1
+WARNING 2024-05-22 12:17:40,965 basehttp 14644 7188"GET /edit_product/1 HTTP/1.1" 404 3201
+INFO 2024-05-22 12:17:46,185 basehttp 14644 7188"GET /edit_product/ HTTP/1.1" 200 1508
+INFO 2024-05-22 12:18:21,859 basehttp 14644 7188"POST /edit_product/ HTTP/1.1" 200 1613
+INFO 2024-05-22 12:19:03,549 basehttp 14644 7188"GET /add_product/ HTTP/1.1" 200 1381
+INFO 2024-05-22 12:19:29,091 basehttp 14644 7188"POST /add_product/ HTTP/1.1" 200 1465
+INFO 2024-05-22 12:20:27,590 autoreload 6040 3588Watching for file changes with StatReloader
+INFO 2024-05-22 12:20:30,796 basehttp 6040 14840"GET /show_product/51 HTTP/1.1" 301 0
+INFO 2024-05-22 12:20:30,814 basehttp 6040 10016"GET /show_product/51/ HTTP/1.1" 200 456

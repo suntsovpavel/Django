@@ -7,8 +7,7 @@ import decimal
 class Command(BaseCommand):
     help = "Fill tables users,products,orders by fake data."
 
-    NUM_PRODUCTS = 20
-    NUM_ORDERS = 100
+    NUM_PRODUCTS = 50
 
     def add_arguments(self, parser):
         parser.add_argument('num_users', type=int, help='User ID')
@@ -33,25 +32,18 @@ class Command(BaseCommand):
                             date = datetime.date(2022,1,1)) 
             prod.save()
 
-        # Составляем какой-то список дат покупок, чтоб потом делать выборки за последнюю неделю и т.п.
-        dates = [datetime.date(2023,1,1),
-                 datetime.date(2023,6,1),
-                 datetime.date(2023,12,1),
-                 datetime.date(2024,2,1),
-                 datetime.date(2024,4,1),
-                 datetime.date(2024,4,10),
-                 datetime.date(2024,4,20),
-                 datetime.date(2024,5,1),
-                 datetime.date(2024,5,5),
-                 datetime.date(2024,5,10),
-                 datetime.date(2024,5,15)]
+        # Пусть заказы формируются каждый день, начиная с 1.1.2023:
+        start = datetime.date(2023, 1, 1)
+        end = datetime.date.today()
+        dates = [start + datetime.timedelta(days=x) for x in range((end-start).days + 1)]
+
         for date in dates:
-            num_products = random.randint(3,15)   # в заказе от 3 до 15 позиций товаров
+            num_products = random.randint(5,15)   # в заказе от 5 до 15 позиций товаров
             products = [random.choice(Product.objects.all()) for _ in range(num_products)]
             total_price=0
             for p in products:
                 total_price += p.price
-            order = Order(customer = random.choice(User.objects.all()),  # cвыбираем случайного пользователя из имеющихся                          
+            order = Order(customer = random.choice(User.objects.all()),  # выбираем случайного пользователя из имеющихся                          
                         date_ordered = date,
                         total_price = total_price)
             order.save()
