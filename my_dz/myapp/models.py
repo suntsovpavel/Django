@@ -32,7 +32,7 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=8, decimal_places=2)    
     amount = models.IntegerField()
     date = models.DateField(blank=False)
-    image = models.FilePathField(default='default_image.png')     
+    imageName = models.CharField(max_length=100, default='default_image.png')
 
     def __str__(self):
         return f'name: {self.name}'

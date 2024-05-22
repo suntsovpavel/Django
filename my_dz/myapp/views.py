@@ -82,7 +82,7 @@ def show_product(request, pk):
                     'price':  product.price,
                     'amount': product.amount, 
                     'date': product.date, 
-                    'path_image': str(os.path.join(MEDIA_ROOT, product.image)) }  # not works...
+                    'path_image': str(os.path.join(MEDIA_ROOT, product.imageName)) }  # not works...
     else:
         context = {'incorrect_product': True}                
     return render (request, 'myapp/show_product.html', context)  
@@ -110,7 +110,7 @@ def edit_product(request):
                 product.price = price
                 product.amount = amount
                 product.date = date
-                product.image = image.name
+                product.imageName = image.name
                 product.save()
                 message = 'Товар успешно изменен'
         else:
@@ -135,7 +135,7 @@ def add_product(request):
             fs = FileSystemStorage()
             fs.save(image.name, image)
 
-            product = Product(name = name,description = description,price = price,amount = amount,date = date,image = image.name)
+            product = Product(name = name,description = description,price = price,amount = amount,date = date,imageName = image.name)
             product.save()
             message = 'Товар успешно добавлен' 
         else:
