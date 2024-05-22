@@ -33,19 +33,19 @@ def inner_list_orders(orders: list[Order],
     result = []
     while len(used_orders) < len(orders):
         # ищем самый поздний заказ вне списка used_orders
-        order = None
-        for ord in orders:
-            if ord not in used_orders and (order == None or ord.date_ordered > order.date_ordered):
-                order = ord   
+        last_order = None
+        for order in orders:
+            if order not in used_orders and (last_order == None or order.date_ordered > last_order.date_ordered):
+                last_order = order   
 
-        if order.date_ordered < date_limit:
+        if last_order.date_ordered < date_limit:
             break                             
 
-        for product in order.products.all():
+        for product in last_order.products.all():
             if not product in used_products:    
-                result.append(f'name: {product.name}, date order: {order.date_ordered}')     
+                result.append(f'name: {product.name}, date order: {last_order.date_ordered}')     
                 used_products.append(product)
-        used_orders.append(order)                
+        used_orders.append(last_order)                
     return result
 
 # ДЗ 3

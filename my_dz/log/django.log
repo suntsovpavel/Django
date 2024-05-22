@@ -750,3 +750,31 @@ INFO 2024-05-22 12:19:29,091 basehttp 14644 7188"POST /add_product/ HTTP/1.1" 20
 INFO 2024-05-22 12:20:27,590 autoreload 6040 3588Watching for file changes with StatReloader
 INFO 2024-05-22 12:20:30,796 basehttp 6040 14840"GET /show_product/51 HTTP/1.1" 301 0
 INFO 2024-05-22 12:20:30,814 basehttp 6040 10016"GET /show_product/51/ HTTP/1.1" 200 456
+INFO 2024-05-22 13:43:15,906 autoreload 5420 14112Watching for file changes with StatReloader
+INFO 2024-05-22 13:43:19,864 views 5420 11308Index page accessed
+INFO 2024-05-22 13:43:19,873 basehttp 5420 11308"GET / HTTP/1.1" 200 3223
+WARNING 2024-05-22 13:43:20,005 log 5420 11308Not Found: /favicon.ico
+WARNING 2024-05-22 13:43:20,005 basehttp 5420 11308"GET /favicon.ico HTTP/1.1" 404 3192
+ERROR 2024-05-22 13:43:29,839 log 5420 11308Internal Server Error: /list_orders/6/
+Traceback (most recent call last):
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\_GB_django\my_dz\myapp\views.py", line 63, in list_orders
+    'data_week': inner_list_orders(orders, (datetime.date.today() - datetime.timedelta(days=7))),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\_GB_django\my_dz\myapp\views.py", line 38, in inner_list_orders
+    if order not in used_orders and (last_order == None or order.date_ordered > last_order.date_ordered):
+                                                                                ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'builtin_function_or_method' object has no attribute 'date_ordered'
+ERROR 2024-05-22 13:43:29,843 basehttp 5420 11308"GET /list_orders/6/ HTTP/1.1" 500 72374
+INFO 2024-05-22 13:45:06,509 autoreload 5420 14112C:\_GB_django\my_dz\myapp\views.py changed, reloading.
+INFO 2024-05-22 13:45:07,236 autoreload 9204 2544Watching for file changes with StatReloader
+INFO 2024-05-22 13:45:08,593 basehttp 9204 5764"GET /list_orders/6/ HTTP/1.1" 200 4456
+INFO 2024-05-22 13:45:17,067 basehttp 9204 5764"GET /list_orders/5/ HTTP/1.1" 200 5963
+INFO 2024-05-22 13:45:22,140 basehttp 9204 5764"GET /list_orders/4/ HTTP/1.1" 200 5078
+INFO 2024-05-22 13:45:30,226 basehttp 9204 5764"GET /list_orders/1/ HTTP/1.1" 200 6153
+INFO 2024-05-22 13:45:40,164 basehttp 9204 5764"GET /list_orders/2/ HTTP/1.1" 200 5774
