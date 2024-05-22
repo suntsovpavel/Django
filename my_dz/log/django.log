@@ -406,3 +406,47 @@ INFO 2024-05-22 09:38:02,823 basehttp 12276 7536"GET /list_orders/56/ HTTP/1.1" 
 INFO 2024-05-22 09:38:08,657 basehttp 12276 7536"GET /list_orders/6/ HTTP/1.1" 200 2859
 INFO 2024-05-22 09:38:25,067 autoreload 12276 13920C:\_GB_django\my_dz\myapp\views.py changed, reloading.
 INFO 2024-05-22 09:38:25,745 autoreload 14032 6212Watching for file changes with StatReloader
+INFO 2024-05-22 10:09:08,062 autoreload 484 8184Watching for file changes with StatReloader
+INFO 2024-05-22 10:09:29,600 autoreload 484 8184C:\_GB_django\my_dz\myapp\views.py changed, reloading.
+INFO 2024-05-22 10:09:30,243 autoreload 1144 9444Watching for file changes with StatReloader
+INFO 2024-05-22 10:09:38,862 views 1144 7016Index page accessed
+INFO 2024-05-22 10:09:38,868 basehttp 1144 7016"GET / HTTP/1.1" 200 3223
+INFO 2024-05-22 10:09:45,577 basehttp 1144 7016"GET /list_orders/6/ HTTP/1.1" 200 2859
+WARNING 2024-05-22 10:09:56,828 log 1144 7016Not Found: /edit_product
+WARNING 2024-05-22 10:09:56,829 basehttp 1144 7016"GET /edit_product HTTP/1.1" 404 2639
+INFO 2024-05-22 10:10:29,203 autoreload 1144 9444C:\_GB_django\my_dz\myapp\urls.py changed, reloading.
+INFO 2024-05-22 10:10:29,907 autoreload 13684 15080Watching for file changes with StatReloader
+INFO 2024-05-22 10:10:34,078 basehttp 13684 8468"GET /edit_product HTTP/1.1" 301 0
+ERROR 2024-05-22 10:10:34,186 log 13684 13716Internal Server Error: /edit_product/
+Traceback (most recent call last):
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\_GB_django\my_dz\myapp\views.py", line 96, in edit_product
+    return render(request, 'myapp/edit product.html', {'title': 'edit_product',
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\01\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: myapp/edit product.html
+ERROR 2024-05-22 10:10:34,189 basehttp 13684 13716"GET /edit_product/ HTTP/1.1" 500 80525
+INFO 2024-05-22 10:11:22,354 autoreload 13684 15080C:\_GB_django\my_dz\myapp\views.py changed, reloading.
+INFO 2024-05-22 10:11:23,033 autoreload 3376 12180Watching for file changes with StatReloader
+INFO 2024-05-22 10:11:27,620 basehttp 3376 12656"GET /edit_product/ HTTP/1.1" 200 1331
+INFO 2024-05-22 10:12:03,969 autoreload 3376 12180C:\_GB_django\my_dz\myapp\forms.py changed, reloading.
+INFO 2024-05-22 10:12:04,656 autoreload 3760 7896Watching for file changes with StatReloader
+INFO 2024-05-22 10:12:22,125 autoreload 3760 7896C:\_GB_django\my_dz\myapp\forms.py changed, reloading.
+INFO 2024-05-22 10:12:22,827 autoreload 8520 2820Watching for file changes with StatReloader
+INFO 2024-05-22 10:12:57,842 basehttp 8520 904"GET /edit_product/ HTTP/1.1" 200 1333
+INFO 2024-05-22 10:13:18,422 autoreload 8520 2820C:\_GB_django\my_dz\myapp\forms.py changed, reloading.
+INFO 2024-05-22 10:13:19,132 autoreload 13412 12592Watching for file changes with StatReloader
+INFO 2024-05-22 10:13:21,298 basehttp 13412 5704"GET /edit_product/ HTTP/1.1" 200 1333
+INFO 2024-05-22 10:13:58,341 basehttp 13412 5704"POST /edit_product/ HTTP/1.1" 200 1431

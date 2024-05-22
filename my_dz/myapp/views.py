@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from .models import Order, User, Product
 import logging
 import datetime
+from .forms import ProductForm
 
 logger = logging.getLogger(__name__)
 
@@ -47,7 +48,7 @@ def inner_list_orders(orders: list[Order],
 # — за последние 7 дней (неделю)
 # — за последние 30 дней (месяц)
 # — за последние 365 дней (год)
-# Товары в списке не должны повторяться.
+# Товары в списке не должны повторяться. 
 def list_orders(request, pk_user: int):
     user = User.objects.filter(pk=pk_user).first()
     if user is not None:            
@@ -65,3 +66,33 @@ def list_orders(request, pk_user: int):
 # ДЗ 4
 # Доработаем задачу про клиентов, заказы и товары из прошлого семинара.
 # Создайте форму для редактирования товаров в базе данных.
+def edit_product(request):    
+    if request.method == 'POST':
+        form = ProductForm(request.POST)        
+        if form.is_valid():
+            pk = form.cleaned_data['pk']    
+            name = form.cleaned_data['name']    
+            description = form.cleaned_data['description']    
+            price = form.cleaned_data['price']    
+            amount = form.cleaned_data['amount']    
+            date = form.cleaned_data['date'] 
+
+            product = Product.objects.filter(pk=pk).first()
+            if product is None:
+                message = 'Такого товара в БД не имеется'
+            else:
+                product.name = name
+                product.description = description
+                product.price = price
+                product.amount = amount
+                product.date = date
+                product.save()
+                message = 'Товар успешно изменен'
+        else:
+            message = 'Некорректные данные'    
+    else:
+        message = 'Заполните форму'
+        form = ProductForm()
+    return render(request, 'myapp/edit_product.html', {'title': 'edit_product', 
+                                                    'message': message,
+                                                    'form':form})     
