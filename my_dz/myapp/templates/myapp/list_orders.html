@@ -3,16 +3,20 @@
 {% block title %}Список заказов{% endblock %}
 
 {% block content %} 
-    <p>Товары за последнюю неделю:</p>
-    {% for one in data_week %}
-        {{one}}</br>
-    {% endfor %}
-    <p>Товары за последний месяц:</p>
-    {% for one in data_month %}
-        {{one}}</br>
-    {% endfor %}
-    <p>Товары за последний год:</p>
-    {% for one in data_year %}
-        {{one}}</br>
-    {% endfor %}
+    {% if incorrect_user %}
+        <p>Введен некорректный id пользователя</p>
+    {% else %}
+        <p>Товары за последнюю неделю:</p>
+        {% for one in data_week %}
+            {{one}}</br>
+        {% endfor %}
+        <p>Товары за последний месяц:</p>
+        {% for one in data_month %}
+            {{one}}</br>
+        {% endfor %}
+        <p>Товары за последний год:</p>
+        {% for one in data_year %}
+            {{one}}</br>
+        {% endfor %}
+    {% endif %}    
 {% endblock %}

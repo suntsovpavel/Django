@@ -388,3 +388,21 @@ INFO 2024-05-21 03:18:21,748 autoreload 8600 6480C:\_GB_django\my_dz\myapp\views
 INFO 2024-05-21 03:18:22,449 autoreload 13308 12868Watching for file changes with StatReloader
 INFO 2024-05-21 03:18:24,276 basehttp 13308 9056"GET /list_orders/6/ HTTP/1.1" 200 2261
 INFO 2024-05-21 03:18:26,437 basehttp 13308 9056"GET /list_orders/6/ HTTP/1.1" 200 2261
+INFO 2024-05-22 09:27:26,664 autoreload 3688 11880Watching for file changes with StatReloader
+INFO 2024-05-22 09:30:02,384 autoreload 3928 4020Watching for file changes with StatReloader
+INFO 2024-05-22 09:31:03,710 autoreload 5760 1272Watching for file changes with StatReloader
+INFO 2024-05-22 09:31:07,518 views 5760 11468Index page accessed
+INFO 2024-05-22 09:31:07,537 basehttp 5760 11468"GET / HTTP/1.1" 200 3223
+INFO 2024-05-22 09:31:20,370 basehttp 5760 11468"GET /list_orders/6/ HTTP/1.1" 200 2261
+INFO 2024-05-22 09:32:09,813 autoreload 5760 1272C:\_GB_django\my_dz\myapp\views.py changed, reloading.
+INFO 2024-05-22 09:32:10,442 autoreload 12320 15188Watching for file changes with StatReloader
+INFO 2024-05-22 09:32:40,559 basehttp 12320 7624"GET /list_orders/6/ HTTP/1.1" 200 2501
+INFO 2024-05-22 09:34:02,725 autoreload 12320 15188C:\_GB_django\my_dz\myapp\views.py changed, reloading.
+INFO 2024-05-22 09:34:03,440 autoreload 13908 13812Watching for file changes with StatReloader
+INFO 2024-05-22 09:36:01,662 autoreload 13908 13812C:\_GB_django\my_dz\myapp\views.py changed, reloading.
+INFO 2024-05-22 09:36:02,348 autoreload 12276 13920Watching for file changes with StatReloader
+INFO 2024-05-22 09:37:58,629 basehttp 12276 7536"GET /list_orders/6/ HTTP/1.1" 200 2859
+INFO 2024-05-22 09:38:02,823 basehttp 12276 7536"GET /list_orders/56/ HTTP/1.1" 200 223
+INFO 2024-05-22 09:38:08,657 basehttp 12276 7536"GET /list_orders/6/ HTTP/1.1" 200 2859
+INFO 2024-05-22 09:38:25,067 autoreload 12276 13920C:\_GB_django\my_dz\myapp\views.py changed, reloading.
+INFO 2024-05-22 09:38:25,745 autoreload 14032 6212Watching for file changes with StatReloader
