@@ -172,3 +172,10 @@ INFO 2024-05-21 23:10:43,754 autoreload 15000 14080C:\_GB_django\sem01\myapp\vie
 INFO 2024-05-21 23:10:44,417 autoreload 8180 8572Watching for file changes with StatReloader
 INFO 2024-05-21 23:10:49,484 basehttp 8180 7484"GET /add_author/ HTTP/1.1" 200 1239
 INFO 2024-05-21 23:12:11,201 basehttp 8180 7484"POST /add_author/ HTTP/1.1" 200 1391
+INFO 2024-05-22 08:39:15,783 autoreload 5108 5528Watching for file changes with StatReloader
+INFO 2024-05-22 08:39:19,794 basehttp 5108 12972"GET / HTTP/1.1" 200 202
+WARNING 2024-05-22 08:39:19,881 log 5108 12972Not Found: /favicon.ico
+WARNING 2024-05-22 08:39:19,882 basehttp 5108 12972"GET /favicon.ico HTTP/1.1" 404 3863
+WARNING 2024-05-22 08:39:29,797 log 5108 12972Not Found: /add_user
+WARNING 2024-05-22 08:39:29,798 basehttp 5108 12972"GET /add_user HTTP/1.1" 404 3854
+INFO 2024-05-22 08:39:44,630 basehttp 5108 12972"GET /add_author/ HTTP/1.1" 200 1239
