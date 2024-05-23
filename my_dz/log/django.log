@@ -1471,3 +1471,55 @@ INFO 2024-05-22 22:12:11,724 autoreload 9364 5652Watching for file changes with 
 INFO 2024-05-22 22:12:19,607 basehttp 9364 1780"GET /show_product/21/ HTTP/1.1" 200 468
 INFO 2024-05-22 22:12:24,952 basehttp 9364 1780"GET /show_product/53/ HTTP/1.1" 200 211
 INFO 2024-05-22 22:12:29,086 basehttp 9364 1780"GET /show_product/52/ HTTP/1.1" 200 447
+INFO 2024-05-23 12:59:45,318 autoreload 14968 16940Watching for file changes with StatReloader
+INFO 2024-05-23 12:59:55,205 views 14968 15548Index page accessed
+INFO 2024-05-23 12:59:55,312 basehttp 14968 15548"GET / HTTP/1.1" 200 12239
+INFO 2024-05-23 12:59:55,357 basehttp 14968 15548"GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12621
+INFO 2024-05-23 12:59:55,364 basehttp 14968 896"GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+INFO 2024-05-23 12:59:55,372 basehttp 14968 11128"GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13578
+INFO 2024-05-23 12:59:55,432 basehttp 14968 11128"GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4527
+INFO 2024-05-23 13:00:00,316 views 14968 11128Index page accessed
+INFO 2024-05-23 13:00:00,333 basehttp 14968 11128"GET / HTTP/1.1" 200 12239
+INFO 2024-05-23 13:00:00,776 views 14968 11128about page accessed
+INFO 2024-05-23 13:00:00,794 basehttp 14968 11128"GET /about/ HTTP/1.1" 200 10799
+INFO 2024-05-23 13:00:02,023 views 14968 11128Index page accessed
+INFO 2024-05-23 13:00:02,039 basehttp 14968 11128"GET / HTTP/1.1" 200 12239
+INFO 2024-05-23 13:00:13,106 views 14968 11128about page accessed
+INFO 2024-05-23 13:00:13,122 basehttp 14968 11128"GET /about/ HTTP/1.1" 200 10799
+INFO 2024-05-23 13:00:16,734 views 14968 11128Index page accessed
+INFO 2024-05-23 13:00:16,750 basehttp 14968 11128"GET / HTTP/1.1" 200 12239
+INFO 2024-05-23 13:00:17,776 views 14968 11128about page accessed
+INFO 2024-05-23 13:00:17,791 basehttp 14968 11128"GET /about/ HTTP/1.1" 200 10799
+INFO 2024-05-23 13:00:19,551 views 14968 11128Index page accessed
+INFO 2024-05-23 13:00:19,568 basehttp 14968 11128"GET / HTTP/1.1" 200 12239
+INFO 2024-05-23 13:05:57,913 basehttp 14968 7812"GET /list_orders/1/ HTTP/1.1" 200 15196
+INFO 2024-05-23 13:05:57,947 basehttp 14968 7812"GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+INFO 2024-05-23 13:05:57,966 basehttp 14968 13884"GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+INFO 2024-05-23 13:05:57,967 basehttp 14968 644"GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+INFO 2024-05-23 13:05:57,978 basehttp 14968 644"GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+INFO 2024-05-23 13:06:29,972 basehttp 14968 644"GET /list_orders/3/ HTTP/1.1" 200 15830
+INFO 2024-05-23 13:06:45,328 basehttp 14968 644"GET /list_orders/7/ HTTP/1.1" 200 15570
+INFO 2024-05-23 13:09:59,937 basehttp 14968 644"GET /__debug__/render_panel/?store_id=eecca6bc24ef4692bede60b91993e8ed&panel_id=HistoryPanel HTTP/1.1" 200 17748
+INFO 2024-05-23 13:09:59,964 basehttp 14968 644"GET /static/debug_toolbar/js/history.js HTTP/1.1" 200 3515
+INFO 2024-05-23 13:10:13,422 autoreload 14968 16940C:\_GB_django\my_dz\my_dz\settings.py changed, reloading.
+INFO 2024-05-23 13:10:14,186 autoreload 12920 8756Watching for file changes with StatReloader
+INFO 2024-05-23 13:10:22,712 basehttp 12920 17228"GET /list_orders/7/ HTTP/1.1" 200 16369
+INFO 2024-05-23 13:10:22,756 basehttp 12920 17228"GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+INFO 2024-05-23 13:10:22,770 basehttp 12920 1004"GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+INFO 2024-05-23 13:10:22,782 basehttp 12920 1004"GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+INFO 2024-05-23 13:10:22,783 basehttp 12920 1348"GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+INFO 2024-05-23 13:10:27,083 basehttp 12920 1348"GET /list_orders/7/ HTTP/1.1" 200 16368
+INFO 2024-05-23 13:10:28,309 basehttp 12920 1348"GET /__debug__/render_panel/?store_id=2f6bdfec049f40689210c60c773830cf&panel_id=HistoryPanel HTTP/1.1" 200 4167
+INFO 2024-05-23 13:11:57,835 basehttp 12920 1348"GET /__debug__/render_panel/?store_id=ea4f18e8c5b54cc9aa5ba2609de5ccf9&panel_id=SQLPanel HTTP/1.1" 200 531
+INFO 2024-05-23 13:23:36,618 views 12920 16348Index page accessed
+INFO 2024-05-23 13:23:36,696 basehttp 12920 16348"GET / HTTP/1.1" 200 13037
+INFO 2024-05-23 13:23:36,752 basehttp 12920 16348"GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+INFO 2024-05-23 13:23:36,762 basehttp 12920 16348"GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+INFO 2024-05-23 13:23:36,763 basehttp 12920 13272"GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+INFO 2024-05-23 13:23:36,815 basehttp 12920 13272"GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+INFO 2024-05-23 13:23:44,538 basehttp 12920 13272"GET /__debug__/render_panel/?store_id=5b68b5a4573b4a26952bc7e073fcdef4&panel_id=TemplatesPanel HTTP/1.1" 200 6301
+INFO 2024-05-23 13:23:54,002 basehttp 12920 13272"GET /show_product/21/ HTTP/1.1" 200 10320
+INFO 2024-05-23 13:30:10,431 autoreload 12920 8756C:\_GB_django\my_dz\my_dz\settings.py changed, reloading.
+INFO 2024-05-23 13:30:11,250 autoreload 2696 4168Watching for file changes with StatReloader
+INFO 2024-05-23 13:36:36,418 autoreload 13644 11080Watching for file changes with StatReloader
+INFO 2024-05-23 13:37:53,803 autoreload 13644 11080C:\_GB_django\my_dz\my_dz\settings.py changed, reloading.

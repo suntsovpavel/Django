@@ -1851,3 +1851,21 @@ INFO 2024-05-22 15:48:33,414 basehttp 5204 7748"GET /admin/myapp5/product/ HTTP/
 INFO 2024-05-22 15:48:33,450 basehttp 5204 7748"GET /admin/jsi18n/ HTTP/1.1" 200 3342
 INFO 2024-05-22 15:48:39,010 basehttp 5204 7748"GET /admin/myapp5/product/2/change/ HTTP/1.1" 200 14971
 INFO 2024-05-22 15:48:39,042 basehttp 5204 7748"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-05-23 12:00:41,958 autoreload 15832 3304Watching for file changes with StatReloader
+INFO 2024-05-23 12:01:15,690 autoreload 15832 3304C:\_GB_django\001\mydjango\mydjango\settings.py changed, reloading.
+INFO 2024-05-23 12:01:16,928 autoreload 6696 13624Watching for file changes with StatReloader
+INFO 2024-05-23 12:01:26,912 basehttp 6696 1364"GET / HTTP/1.1" 200 10296
+INFO 2024-05-23 12:01:26,956 basehttp 6696 1364"GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12621
+INFO 2024-05-23 12:01:26,970 basehttp 6696 5808"GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+INFO 2024-05-23 12:01:26,984 basehttp 6696 9652"GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13578
+INFO 2024-05-23 12:01:27,037 basehttp 6696 9652"GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4527
+WARNING 2024-05-23 12:01:27,126 log 6696 9652Not Found: /favicon.ico
+WARNING 2024-05-23 12:01:27,126 basehttp 6696 9652"GET /favicon.ico HTTP/1.1" 404 11633
+INFO 2024-05-23 12:02:05,465 autoreload 6696 13624C:\_GB_django\001\mydjango\mydjango\settings.py changed, reloading.
+INFO 2024-05-23 12:02:06,330 autoreload 6644 17052Watching for file changes with StatReloader
+INFO 2024-05-23 12:02:09,465 basehttp 6644 6256"GET / HTTP/1.1" 200 11093
+INFO 2024-05-23 12:02:35,421 basehttp 6644 6256"GET /__debug__/render_panel/?store_id=6c55f68ace2f43b984e7fe7847f86520&panel_id=HistoryPanel HTTP/1.1" 200 2505
+INFO 2024-05-23 12:02:35,440 basehttp 6644 6256"GET /static/debug_toolbar/js/history.js HTTP/1.1" 200 3515
+INFO 2024-05-23 12:02:53,698 basehttp 6644 6256"GET /__debug__/render_panel/?store_id=6c55f68ace2f43b984e7fe7847f86520&panel_id=VersionsPanel HTTP/1.1" 200 760
+INFO 2024-05-23 12:03:08,588 basehttp 6644 6256"GET /__debug__/history_refresh/?store_id=6c55f68ace2f43b984e7fe7847f86520&exclude_history=True HTTP/1.1" 200 1683
+INFO 2024-05-23 12:03:19,453 basehttp 6644 6256"GET /__debug__/render_panel/?store_id=6c55f68ace2f43b984e7fe7847f86520&panel_id=SettingsPanel HTTP/1.1" 200 26668
