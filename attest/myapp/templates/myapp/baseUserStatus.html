@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="../../../static/style.css">
     <title>{% block title %}Сайт{% endblock %}</title>
   </head>
   <body>
     <p>
       {% if user.is_authenticated %}
-          Добро пожаловать, {{ user.username }}!  <a href="/user_out/">Выйти</a>
+          Добро пожаловать, {{ user.username }}!  <a href="/logout/">Выйти</a>
       {% else %}
           Пожалуйста, <a href="/login">войдите</a> или <a href="/reg">зарегистрируйтесь</a>
       {% endif %}
