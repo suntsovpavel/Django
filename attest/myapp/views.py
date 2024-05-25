@@ -11,7 +11,7 @@ from .models import MyUser, Recipe, Category
 # Главная с 5 случайными рецептами кратко
 def index(request):    
     return render(request, 'myapp/index.html', {'title': 'Главная', 
-                                                'content': 'Главная'})
+                                                'content': ''})
     # Случайным образом выбираем 5 рецептов  
 
 

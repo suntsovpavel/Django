@@ -3,7 +3,10 @@
 {% block title %}{{title}}{% endblock %}
 
 {% block content %}
-    <a href="/">Главная</a>
+    <div class="user_line">
+        <a href="/">Главная</a>
+    </div>
+    
     <h2>{{ message }}</h2>
     <form action="" method="post">
         {% csrf_token %}

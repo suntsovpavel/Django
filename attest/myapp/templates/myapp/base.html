@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="../../../static/style.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
     <title>{% block title %}Сайт{% endblock %}</title>
   </head>
   <body>
