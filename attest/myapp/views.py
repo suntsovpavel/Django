@@ -7,12 +7,12 @@ from .forms import LoginForm, RecipeForm
 from datetime import datetime
 from django.core.files.storage import FileSystemStorage
 
-from .models import MyUser, Recipe
+from .models import MyUser, Recipe, Category
 
-def index(request):
+def index(request):    
     return render(request, 'myapp/index.html', {'title': 'Главная', 
                                                 'user': request.user,
-                                                'content': 'Пока ничего'})
+                                                'content': [{ x.name: x.name } for x in Category.objects.all()]})
 
 # Страница авторизации
 def my_login(request):
@@ -28,7 +28,11 @@ def my_login(request):
             user = authenticate(request, username=username, password=password)
             if user is not None:
                 login(request, user)
-                # return HttpResponse(request.user.username)
+                # Проверяем, внесен ли пользователь в список MyUser. Если нет - добавляем
+                myUser = MyUser.objects.filter(username=username).first()
+                if myUser is None:
+                    myUser = MyUser(username=username, date_register=datetime.now())
+                    myUser.save()
                 return redirect('/')                
             else:
                 message = 'Логин либо пароль некорректны!' 
@@ -52,7 +56,7 @@ def my_reg(request):
             password = form.cleaned_data['password1']    
             user = authenticate(request, username=username, password=password)
             login(request, user)
-            myUser = MyUser(username=username, date_register=datetime.time.now())
+            myUser = MyUser(username=username, date_register=datetime.now())
             myUser.save()
             return redirect('/')
         else:
@@ -70,6 +74,28 @@ def my_logout(request):
         logout(request)
     return redirect('/')
 
+# вспомогательная таблица категорий
+def fill_categories(request):  
+    c = Category.objects.last()  
+    while c is not None: # удаляем все существующие записи в БД
+        c.delete()
+        c = Category.objects.last()         
+
+    categories = ['выпечка',
+                  'мясная продукция',
+                  'молочная продукция',
+                  'сыроедение',
+                  'вегетарианство',
+                  'салаты',
+                  'супы',
+                  'легкие закуски']
+    i=0
+    for name in categories:
+        cat = Category(name=name, desc=f'some description{i}')
+        cat.save()
+        i += 1
+    return redirect('/')
+
 # Страница добавления рецепта
 # Доступна только для авторизованного пользователя
 def add_recipe(request):
@@ -80,7 +106,7 @@ def add_recipe(request):
     if request.method == 'POST':
         form = RecipeForm(request.POST, request.FILES)     
         if form.is_valid():   
-            myUser = MyUser.objects.filter(name=request.user.username).first()
+            myUser = MyUser.objects.filter(username=request.user.username).first()
             if myUser is None:
                 return HttpResponse(f'!!! Пользователь {request.user.username} отсутствует в базе!!!')
             else:                        
@@ -93,20 +119,25 @@ def add_recipe(request):
                 fs = FileSystemStorage()
                 fs.save(image.name, image)
 
-                resipe = Recipe(author=myUser,
-                                name=name,
-                                desc=desc,
-                                cooking_steps=cooking_steps,
-                                time_cooking=time_cooking,
-                                category=category,
-                                image=image)    
-                resipe.save()
-                message = 'Рецепт успешно добавлен!'
+                if len(category) > 0:
+                    recipe = Recipe(author=myUser,
+                                    name=name,
+                                    desc=desc,
+                                    cooking_steps=cooking_steps,
+                                    time_cooking=time_cooking,
+                                    image=image,
+                                    date = datetime.now())    
+                    recipe.save()
+                    for c in category:
+                        if not c in recipe.categories:
+                            recipe.categories.add(c)
+                else:
+                    message = 'Выберите как минимум одну категорию!'    
         else:
             message = 'Некорректные данные'    
     else:
         message = 'Заполните форму'
-        form = RecipeForm()
+        form = RecipeForm()        
     return render(request, 'myapp/add_recipe.html', {'title': 'Новый рецепт', 
                                                     'message': message,
                                                     'form':form})   

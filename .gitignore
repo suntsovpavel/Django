@@ -3,3 +3,4 @@ __pycache__
 _ source/
 *.bak
 venv/
+media/

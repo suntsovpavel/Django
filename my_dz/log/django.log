@@ -1471,3 +1471,24 @@ INFO 2024-05-22 22:12:11,724 autoreload 9364 5652Watching for file changes with 
 INFO 2024-05-22 22:12:19,607 basehttp 9364 1780"GET /show_product/21/ HTTP/1.1" 200 468
 INFO 2024-05-22 22:12:24,952 basehttp 9364 1780"GET /show_product/53/ HTTP/1.1" 200 211
 INFO 2024-05-22 22:12:29,086 basehttp 9364 1780"GET /show_product/52/ HTTP/1.1" 200 447
+INFO 2024-05-24 14:09:32,960 autoreload 16240 19332Watching for file changes with StatReloader
+INFO 2024-05-24 14:09:36,756 views 16240 16588Index page accessed
+INFO 2024-05-24 14:09:36,807 basehttp 16240 16588"GET / HTTP/1.1" 200 3223
+WARNING 2024-05-24 14:09:36,974 log 16240 16588Not Found: /favicon.ico
+WARNING 2024-05-24 14:09:36,975 basehttp 16240 16588"GET /favicon.ico HTTP/1.1" 404 3192
+INFO 2024-05-24 14:09:38,485 views 16240 16588about page accessed
+INFO 2024-05-24 14:09:38,489 basehttp 16240 16588"GET /about/ HTTP/1.1" 200 1777
+INFO 2024-05-24 14:09:38,981 views 16240 16588Index page accessed
+INFO 2024-05-24 14:09:38,983 basehttp 16240 16588"GET / HTTP/1.1" 200 3223
+INFO 2024-05-24 14:09:46,264 basehttp 16240 16588"GET /show_product/21/ HTTP/1.1" 200 468
+INFO 2024-05-25 10:36:06,742 autoreload 12432 9668Watching for file changes with StatReloader
+INFO 2024-05-25 10:36:08,439 views 12432 17068Index page accessed
+INFO 2024-05-25 10:36:08,480 basehttp 12432 17068"GET / HTTP/1.1" 200 3223
+WARNING 2024-05-25 10:36:08,625 log 12432 17068Not Found: /favicon.ico
+WARNING 2024-05-25 10:36:08,626 basehttp 12432 17068"GET /favicon.ico HTTP/1.1" 404 3192
+WARNING 2024-05-25 10:36:57,082 log 12432 17068Not Found: /login
+WARNING 2024-05-25 10:36:57,082 basehttp 12432 17068"GET /login HTTP/1.1" 404 3174
+INFO 2024-05-25 10:37:44,549 autoreload 12432 9668C:\_GB_django\my_dz\my_dz\settings.py changed, reloading.
+INFO 2024-05-25 10:37:45,205 autoreload 19804 3528Watching for file changes with StatReloader
+WARNING 2024-05-25 10:37:49,958 log 19804 10048Not Found: /login
+WARNING 2024-05-25 10:37:49,959 basehttp 19804 10048"GET /login HTTP/1.1" 404 3174
