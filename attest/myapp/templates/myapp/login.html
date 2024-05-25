@@ -4,7 +4,8 @@
 
 {% block content %}
     <a href="/reg">Регистрация нового пользователя</a>
-    <p>{{ message }}</p>
+    <a href="/">Главная</a>
+    <h2>{{ message }}</h2>
     <form action="" method="post">
         {% csrf_token %}
         {{ form.as_p }}

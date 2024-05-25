@@ -1,8 +1,13 @@
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.forms import UserCreationForm
 from django.http import HttpResponse
 from django.shortcuts import redirect, render
-from .forms import LoginForm
-from django.contrib.auth import authenticate, login, logout
-from django.contrib.auth.forms import UserCreationForm
+from .forms import LoginForm, RecipeForm
+from datetime import datetime
+from django.core.files.storage import FileSystemStorage
+
+from .models import MyUser, Recipe
 
 def index(request):
     return render(request, 'myapp/index.html', {'title': 'Главная', 
@@ -23,11 +28,12 @@ def my_login(request):
             user = authenticate(request, username=username, password=password)
             if user is not None:
                 login(request, user)
-                return redirect('/')
+                # return HttpResponse(request.user.username)
+                return redirect('/')                
             else:
-                message = 'Такого пользователя нет в базе' 
+                message = 'Логин либо пароль некорректны!' 
         else:
-            message = 'Некорректный формат введенных данных'                
+            message = 'Некорректный формат введенных данных!'                
     else:
         message = 'Введите логин и пароль'
         form = LoginForm()
@@ -36,7 +42,7 @@ def my_login(request):
                                                 'form':form})
 
 # Страница регистрации 
-# Используем готовую форму ввода данных при регистрации UserCreationForm
+# Используем готовую форму ввода данных регистрации UserCreationForm
 def my_reg(request):    
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
@@ -46,9 +52,11 @@ def my_reg(request):
             password = form.cleaned_data['password1']    
             user = authenticate(request, username=username, password=password)
             login(request, user)
+            myUser = MyUser(username=username, date_register=datetime.time.now())
+            myUser.save()
             return redirect('/')
         else:
-            message = 'Некорректный формат введенных данных'                
+            message = 'Некорректный формат введенных данных!'                
     else:
         message = 'Регистрация нового пользователя'
         form = UserCreationForm()
@@ -61,4 +69,51 @@ def my_logout(request):
     if request.user.is_authenticated:
         logout(request)
     return redirect('/')
+
+# Страница добавления рецепта
+# Доступна только для авторизованного пользователя
+def add_recipe(request):
+    # Неавторизованных пользователей перебрасываем на страницу авторизации:
+    if not request.user.is_authenticated:
+        return redirect('/login/')
+    
+    if request.method == 'POST':
+        form = RecipeForm(request.POST, request.FILES)     
+        if form.is_valid():   
+            myUser = MyUser.objects.filter(name=request.user.username).first()
+            if myUser is None:
+                return HttpResponse(f'!!! Пользователь {request.user.username} отсутствует в базе!!!')
+            else:                        
+                name = form.cleaned_data['name']    
+                desc = form.cleaned_data['desc']    
+                cooking_steps = form.cleaned_data['cooking_steps']    
+                time_cooking = form.cleaned_data['time_cooking']    
+                category = form.cleaned_data['category']    
+                image = form.cleaned_data['image']  
+                fs = FileSystemStorage()
+                fs.save(image.name, image)
+
+                resipe = Recipe(author=myUser,
+                                name=name,
+                                desc=desc,
+                                cooking_steps=cooking_steps,
+                                time_cooking=time_cooking,
+                                category=category,
+                                image=image)    
+                resipe.save()
+                message = 'Рецепт успешно добавлен!'
+        else:
+            message = 'Некорректные данные'    
+    else:
+        message = 'Заполните форму'
+        form = RecipeForm()
+    return render(request, 'myapp/add_recipe.html', {'title': 'Новый рецепт', 
+                                                    'message': message,
+                                                    'form':form})   
+
+
+# Страница редактирования рецепта
+# Доступна только для авторизованного пользователя, который является автором рецепта
+# @login_required
+# def edit_recipe_by_name(request, name: str):
 
