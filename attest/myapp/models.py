@@ -5,7 +5,7 @@ class MyUser(models.Model):
     date_register = models.DateField()
 
     def __str__(self):
-        return f'Username: {self.name}, date_register: {self.date_register}'
+        return f'Username: {self.username}, date_register: {self.date_register}'
 
 # Категории рецептов:
 # ○ Название
@@ -42,6 +42,11 @@ class Recipe(models.Model):
     image = models.ImageField() 
     categories = models.ManyToManyField(Category)
 
-    def __str__(self):
+    NUM_WORDS = 30
+    def short_desc(self):       # краткое описание
         splited = self.desc.split()        
-        return f'name: {self.name}, desc(short): "{splited[:10]+'...' if len(splited)>10 else splited}", by author: {self.author}'     
+        return ' '.join(splited[:self.NUM_WORDS])+' ...' if len(splited)>self.NUM_WORDS else self.desc
+
+    def __str__(self):
+        
+        return f'name: {self.name}, short description: "{self.short_desc()}", by author: {self.author}'     

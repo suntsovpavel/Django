@@ -5,15 +5,26 @@ from django.shortcuts import redirect, render
 from .forms import LoginForm, RecipeForm, EditRecipeForm
 from datetime import datetime
 from django.core.files.storage import FileSystemStorage
+import random
 
 from .models import MyUser, Recipe, Category
 
 # Главная с 5 случайными рецептами кратко
-def index(request):    
-    return render(request, 'myapp/index.html', {'title': 'Главная', 
-                                                'content': ''})
-    # Случайным образом выбираем 5 рецептов  
+def index(request):                                             
+    NUM_RECIPES = 5
+    # Случайным образом выбираем NUM_RECIPES рецептов:  
+    all_recipes = Recipe.objects.all()    
+    indexes = [i for i in range(len(all_recipes))]    
+    data_recipes = []
+    count = 0    
+    while len(indexes) > 0 and count < NUM_RECIPES:        
+        index = indexes.pop(random.randint(0, len(indexes)-1)) 
+        data_recipes.append({'recipe': all_recipes[index], 
+                            'short_desc': all_recipes[index].short_desc()})   
+        count += 1
 
+    return render(request, 'myapp/index.html', {'title': 'Главная', 
+                                                'data_recipes': data_recipes})   
 
 # Страница авторизации
 def my_login(request):
