@@ -12,6 +12,8 @@ from .models import MyUser, Recipe, Category
 def index(request):    
     return render(request, 'myapp/index.html', {'title': 'Главная', 
                                                 'content': 'Главная'})
+    # Случайным образом выбираем 5 рецептов  
+
 
 # Страница авторизации
 def my_login(request):
@@ -87,12 +89,12 @@ def add_recipe(request):
             if myUser is None:
                 return HttpResponse(f'!!! Пользователь {request.user.username} отсутствует в базе!!!')
             else:                        
+                category = form.cleaned_data['category']    
                 if len(category) > 0:
                     name = form.cleaned_data['name']    
                     desc = form.cleaned_data['desc']    
                     cooking_steps = form.cleaned_data['cooking_steps']    
-                    time_cooking = form.cleaned_data['time_cooking']    
-                    category = form.cleaned_data['category']    
+                    time_cooking = form.cleaned_data['time_cooking']                        
                     image = form.cleaned_data['image']  
                     fs = FileSystemStorage()
                     fs.save(image.name, image)
@@ -108,13 +110,13 @@ def add_recipe(request):
                     for name in category:
                         c = Category.objects.filter(name=name).first()
                         recipe.categories.add(c)
-                    message = 'Рецепт успешно добавлен!' 
+                    message = 'Рецепт успешно добавлен!'                     
                 else:
                     message = 'Выберите как минимум одну категорию!'    
         else:
             message = 'Некорректные данные'    
     else:
-        message = 'Заполните форму'
+        message = 'Новый рецепт. Заполните форму'
         form = RecipeForm()        
     return render(request, 'myapp/add_recipe.html', {'title': 'Новый рецепт', 
                                                     'message': message,
@@ -158,12 +160,16 @@ def edit_recipe(request):
                 fs.save(recipe.image.name, recipe.image)
 
                 message = 'Рецепт успешно изменен!' 
+
+                # обновляем список recipes и отображение Select recipe в форме
+                recipes = Recipe.objects.select_related('author').filter(author=myUser)
+                form = EditRecipeForm(recipes=recipes)        
             else:
                 message = 'Выберите как минимум одну категорию!'    
         else:
             message = 'Некорректные данные'    
     else:
-        message = 'Заполните форму'
+        message = 'Редактирование рецепта. Заполните форму'
         form = EditRecipeForm(recipes=recipes)        
     return render(request, 'myapp/add_recipe.html', {'title': 'Редактировать рецепт', 
                                                     'message': message,

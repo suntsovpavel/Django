@@ -55,3 +55,4 @@ class EditRecipeForm(forms.Form):
         super(EditRecipeForm, self).__init__(*args, **kwargs) 
         if self.recipes is not None:
             self.fields['select_recipe'].choices = [(x.name, x.name) for x in self.recipes]
+            self.fields['select_recipe'].default = (self.recipes[0].name, self.recipes[0].name) 
