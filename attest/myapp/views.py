@@ -74,28 +74,6 @@ def my_logout(request):
         logout(request)
     return redirect('/')
 
-# вспомогательная таблица категорий
-def fill_categories(request):  
-    c = Category.objects.last()  
-    while c is not None: # удаляем все существующие записи в БД
-        c.delete()
-        c = Category.objects.last()         
-
-    categories = ['выпечка',
-                  'мясная продукция',
-                  'молочная продукция',
-                  'сыроедение',
-                  'вегетарианство',
-                  'салаты',
-                  'супы',
-                  'легкие закуски']
-    i=0
-    for name in categories:
-        cat = Category(name=name, desc=f'some description{i}')
-        cat.save()
-        i += 1
-    return redirect('/')
-
 # Страница добавления рецепта
 # Доступна только для авторизованного пользователя
 def add_recipe(request):
@@ -128,9 +106,10 @@ def add_recipe(request):
                                     image=image,
                                     date = datetime.now())    
                     recipe.save()
-                    for c in category:
-                        if not c in recipe.categories:
-                            recipe.categories.add(c)
+                    for name in category:
+                        c = Category.objects.filter(name=name).first()
+                        recipe.categories.add(c)
+                    message = 'Рецепт успешно добавлен!' 
                 else:
                     message = 'Выберите как минимум одну категорию!'    
         else:
@@ -148,3 +127,27 @@ def add_recipe(request):
 # @login_required
 # def edit_recipe_by_name(request, name: str):
 
+
+
+
+# вспомогательная таблица категорий
+def fill_categories(request):  
+    c = Category.objects.last()  
+    while c is not None: # удаляем все существующие записи в БД
+        c.delete()
+        c = Category.objects.last()         
+
+    categories = ['выпечка',
+                  'мясная продукция',
+                  'молочная продукция',
+                  'сыроедение',
+                  'вегетарианство',
+                  'салаты',
+                  'супы',
+                  'легкие закуски']
+    i=0
+    for name in categories:
+        cat = Category(name=name, desc=f'some description{i}')
+        cat.save()
+        i += 1
+    return redirect('/')
