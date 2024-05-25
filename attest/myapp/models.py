@@ -5,7 +5,7 @@ class MyUser(models.Model):
     date_register = models.DateField()
 
     def __str__(self):
-        return f'Username: {self.username}, date_register: {self.date_register}'
+        return f'Логин: {self.username}, дата регистрации: {self.date_register}'
 
 # Категории рецептов:
 # ○ Название
@@ -16,6 +16,9 @@ class Category(models.Model):
 
     def __str__(self):
         return f'name: {self.name}, description:{self.desc}'
+    
+    def get_name(self):
+        return self.name
     
 class Ingredient(models.Model):
     name = models.CharField(max_length=100)   

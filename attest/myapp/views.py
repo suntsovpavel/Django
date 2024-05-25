@@ -161,12 +161,12 @@ def edit_recipe(request):
                 recipe.time_cooking = form.cleaned_data['time_cooking']                    
                 recipe.image = form.cleaned_data['image']  
                 recipe.date = datetime.now()
-                recipe.categories.through.objects.all().delete()
+                recipe.save()                
                 for name in category:
                     c = Category.objects.filter(name=name).first()
-                    recipe.categories.add(c)
-                recipe.save()
-
+                    if not c in recipe.categories.all():
+                        recipe.categories.add(c)
+                
                 fs = FileSystemStorage()
                 fs.save(recipe.image.name, recipe.image)
 
@@ -186,6 +186,19 @@ def edit_recipe(request):
                                                     'message': message,
                                                     'form':form})      
 
+# Страница с одним подробным рецептом
+def show_recipe(request, pk:int):
+    recipe = Recipe.objects.filter(pk=pk).first()
+    if recipe is None:
+        # Выводим названия всех рецептов в БД на выбор
+        list_id = [recipe.pk for recipe in Recipe.objects.all()]
+        message = f'Введен некорректный id.\nИмеются в наличии: {list_id}'
+        return render(request, 'myapp/message_out.html', {'title': 'Сообщение', 'content': message})       
+    else:
+        print(recipe.categories.all())
+        return render(request, 'myapp/show_recipe.html', {'title': 'Показать рецепт',                                                        
+                                                        'recipe':recipe,                                                        
+                                                        'categories': '; '.join([x.get_name() for x in recipe.categories.all()])})         
 
 # формируем вспомогательную таблицу категорий
 def fill_categories(request):  
@@ -198,12 +211,17 @@ def fill_categories(request):
     categories = ['выпечка',
                   'мясная продукция',
                   'молочная продукция',
-                  'сыроедение',
-                  'вегетарианство',
                   'салаты',
                   'супы',
-                  'легкие закуски']
+                  'легкие закуски',
+                  'первые блюда',
+                  'вторые блюда',
+                  'напитки',
+                  'десерты',
+                  ]
     for index,name in enumerate(categories):
         cat = Category(name=name, desc=f'some description{index}')
         cat.save()
     return redirect('/')
+
+
