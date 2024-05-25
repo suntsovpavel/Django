@@ -1,18 +1,17 @@
 from django.contrib.auth import authenticate, login, logout
-from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 from django.http import HttpResponse
 from django.shortcuts import redirect, render
-from .forms import LoginForm, RecipeForm
+from .forms import LoginForm, RecipeForm, EditRecipeForm
 from datetime import datetime
 from django.core.files.storage import FileSystemStorage
 
 from .models import MyUser, Recipe, Category
 
+# Главная с 5 случайными рецептами кратко
 def index(request):    
     return render(request, 'myapp/index.html', {'title': 'Главная', 
-                                                'user': request.user,
-                                                'content': [{ x.name: x.name } for x in Category.objects.all()]})
+                                                'content': 'Главная'})
 
 # Страница авторизации
 def my_login(request):
@@ -88,16 +87,16 @@ def add_recipe(request):
             if myUser is None:
                 return HttpResponse(f'!!! Пользователь {request.user.username} отсутствует в базе!!!')
             else:                        
-                name = form.cleaned_data['name']    
-                desc = form.cleaned_data['desc']    
-                cooking_steps = form.cleaned_data['cooking_steps']    
-                time_cooking = form.cleaned_data['time_cooking']    
-                category = form.cleaned_data['category']    
-                image = form.cleaned_data['image']  
-                fs = FileSystemStorage()
-                fs.save(image.name, image)
-
                 if len(category) > 0:
+                    name = form.cleaned_data['name']    
+                    desc = form.cleaned_data['desc']    
+                    cooking_steps = form.cleaned_data['cooking_steps']    
+                    time_cooking = form.cleaned_data['time_cooking']    
+                    category = form.cleaned_data['category']    
+                    image = form.cleaned_data['image']  
+                    fs = FileSystemStorage()
+                    fs.save(image.name, image)
+                
                     recipe = Recipe(author=myUser,
                                     name=name,
                                     desc=desc,
@@ -121,19 +120,61 @@ def add_recipe(request):
                                                     'message': message,
                                                     'form':form})   
 
-
 # Страница редактирования рецепта
 # Доступна только для авторизованного пользователя, который является автором рецепта
-# @login_required
-# def edit_recipe_by_name(request, name: str):
+def edit_recipe(request):
+    # Неавторизованных пользователей перебрасываем на страницу авторизации:
+    if not request.user.is_authenticated:
+        return redirect('/login/')
+    
+    # Выборка рецептов текущего пользователя:
+    myUser = MyUser.objects.filter(username=request.user.username).first()
+    recipes = Recipe.objects.select_related('author').filter(author=myUser)
+    if len(recipes) == 0:
+        message = f'У пользователя {request.user.username} нет рецептов для редактирования'
+        return render(request, 'myapp/message_out.html', {'title': 'Сообщение', 'content': message})
+
+    if request.method == 'POST':
+        form = EditRecipeForm(request.POST, request.FILES, recipes=recipes)     
+        if form.is_valid():   
+            category = form.cleaned_data['category']    
+            if len(category) > 0:
+                select_recipe = form.cleaned_data['select_recipe']    
+                recipe = Recipe.objects.filter(name=select_recipe).first()                                    
+
+                recipe.name = form.cleaned_data['name']    
+                recipe.desc = form.cleaned_data['desc']    
+                recipe.cooking_steps = form.cleaned_data['cooking_steps']    
+                recipe.time_cooking = form.cleaned_data['time_cooking']                    
+                recipe.image = form.cleaned_data['image']  
+                recipe.date = datetime.now()
+                recipe.categories.through.objects.all().delete()
+                for name in category:
+                    c = Category.objects.filter(name=name).first()
+                    recipe.categories.add(c)
+                recipe.save()
+
+                fs = FileSystemStorage()
+                fs.save(recipe.image.name, recipe.image)
+
+                message = 'Рецепт успешно изменен!' 
+            else:
+                message = 'Выберите как минимум одну категорию!'    
+        else:
+            message = 'Некорректные данные'    
+    else:
+        message = 'Заполните форму'
+        form = EditRecipeForm(recipes=recipes)        
+    return render(request, 'myapp/add_recipe.html', {'title': 'Редактировать рецепт', 
+                                                    'message': message,
+                                                    'form':form})      
 
 
-
-
-# вспомогательная таблица категорий
+# формируем вспомогательную таблицу категорий
 def fill_categories(request):  
+    # удаляем все существующие записи в БД
     c = Category.objects.last()  
-    while c is not None: # удаляем все существующие записи в БД
+    while c is not None: 
         c.delete()
         c = Category.objects.last()         
 
@@ -145,9 +186,7 @@ def fill_categories(request):
                   'салаты',
                   'супы',
                   'легкие закуски']
-    i=0
-    for name in categories:
-        cat = Category(name=name, desc=f'some description{i}')
+    for index,name in enumerate(categories):
+        cat = Category(name=name, desc=f'some description{index}')
         cat.save()
-        i += 1
     return redirect('/')
